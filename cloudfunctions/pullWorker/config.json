@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "openapi": []
+  },
+  "triggers": [
+    {
+      "name": "pull-timer",
+      "type": "timer",
+      "config": "0 13,43 * * * * *"
+    }
+  ]
+}

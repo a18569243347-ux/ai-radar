@@ -1,0 +1,9 @@
+{
+  "name": "pullWorker",
+  "version": "1.0.0",
+  "description": "定时从数据源拉取最新数据集写入云数据库",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}
