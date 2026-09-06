@@ -39,6 +39,7 @@ my $free_tiers = load('free_tiers')->{free_tiers};
 my $aggregs    = load('aggregators')->{aggregators};
 my $regions    = load('regional_plans')->{regions};
 my $regional   = load('regional_plans')->{regional_plans};
+my $benchmarks = load('benchmarks');
 
 $meta->{updated_at}   = $now;
 $meta->{source_notes} = ['openrouter: offline 模式跳过', 'deepseek: offline 模式跳过'];
@@ -59,6 +60,7 @@ my $ds = {
     aggregators   => $aggregs,
     regions       => $regions,
     regional_plans => $regional,
+    benchmarks    => $benchmarks,
 };
 
 # ---- 校验（与 crawler/validate.py 口径一致的核心项） ----

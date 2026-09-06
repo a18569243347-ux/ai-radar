@@ -1,0 +1,7 @@
+{
+  "_readme": "性能分数数据结构（预留，当前暂未接入）。计划来源：LMArena 公开排行榜。暂缓原因：官方页为前端渲染且直连不稳定，第三方转述互相矛盾且与现行模型命名对不上——为避免编造分数，性能类榜单暂以 models.json 的 tier（厂商官方档位定位）口径呈现。待获得可靠官方数据后在 scores 数组填充条目：model_id（对应 models.json）、arena_score（数值）、as_of（日期）、source_url，前端相关榜单自动启用。",
+  "source": "LMArena (https://lmarena.ai/leaderboard/text)",
+  "source_note": "接入方案候选：LMArena 官方数据文件、可信转载源交叉核对",
+  "as_of": null,
+  "scores": []
+}

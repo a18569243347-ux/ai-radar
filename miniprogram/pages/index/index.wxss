@@ -1,29 +1,63 @@
-.hot-caption {
+.board-chips {
+  white-space: nowrap;
   margin-bottom: 8rpx;
 }
 
-.hot-row {
+.chips-line {
+  display: inline-flex;
+}
+
+.lb-note {
+  font-size: 22rpx;
+  margin-bottom: 8rpx;
+}
+
+.lb-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 18rpx 0;
   border-bottom: 2rpx solid #F0F2F5;
 }
 
-.hot-row:last-child {
+.lb-row:last-child {
   border-bottom: none;
 }
 
-.hot-left {
+.lb-rank {
+  width: 72rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #4F7CFF;
+  flex-shrink: 0;
+}
+
+.lb-free {
+  font-size: 22rpx;
+  color: #12855F;
+}
+
+.lb-main {
+  flex: 1;
+  min-width: 0;
+  margin-right: 16rpx;
+}
+
+.lb-name-line {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.hot-name {
+.lb-name {
+  font-size: 28rpx;
   font-weight: 500;
 }
 
-.hot-price {
+.lb-sub {
+  font-size: 22rpx;
+}
+
+.lb-metric {
   font-size: 26rpx;
+  white-space: nowrap;
 }

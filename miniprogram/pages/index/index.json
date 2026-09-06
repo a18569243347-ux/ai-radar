@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "AI价格雷达"
+  "navigationBarTitleText": "AI价格雷达",
+  "enablePullDownRefresh": true
 }

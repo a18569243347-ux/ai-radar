@@ -60,6 +60,7 @@ def build(offline=False):
     aggregators = _load("aggregators")["aggregators"]
     regions = _load("regional_plans")["regions"]
     regional_plans = _load("regional_plans")["regional_plans"]
+    benchmarks = _load("benchmarks")
 
     fx = get_fx(offline=offline)
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
@@ -75,6 +76,7 @@ def build(offline=False):
         "aggregators": aggregators,
         "regions": regions,
         "regional_plans": regional_plans,
+        "benchmarks": benchmarks,
     }
     dataset["meta"]["source_notes"] = run_sources(dataset, {"offline": offline, "fx": fx, "now": now})
     return dataset

@@ -83,6 +83,16 @@ def validate(ds):
     if len(rp_ids) != len(ds.get("regional_plans", [])):
         errors.append("regional_plans.id 存在重复")
 
+    mids = {m.get("id") for m in ds["models"]}
+    for b in ds.get("benchmarks", {}).get("scores", []):
+        if b.get("model_id") not in mids:
+            errors.append(f"benchmark {b.get('model_id')}: 未知 model_id")
+        v = b.get("arena_score")
+        if not isinstance(v, (int, float)) or v <= 0 or v > 3000:
+            errors.append(f"benchmark {b.get('model_id')}: arena_score 非法（{v!r}）")
+        if not b.get("as_of") or not b.get("source_url"):
+            errors.append(f"benchmark {b.get('model_id')}: 缺 as_of / source_url")
+
     blob = json.dumps(ds, ensure_ascii=False)
     for w in BANNED_WORDS:
         if w in blob:

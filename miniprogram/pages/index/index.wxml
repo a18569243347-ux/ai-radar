@@ -1,15 +1,42 @@
 <view class="container">
   <view class="banner-warn" wx:if="{{banner}}">{{banner}}</view>
 
+  <scroll-view scroll-x class="board-chips">
+    <view class="chips chips-line">
+      <view
+        class="chip {{board === item.key ? 'active' : ''}}"
+        wx:for="{{boards}}"
+        wx:for-item="item"
+        wx:key="key"
+        bindtap="onBoardTap"
+        data-key="{{item.key}}"
+      >{{item.label}}</view>
+    </view>
+  </scroll-view>
+
+  <view class="chips" wx:if="{{board === 'price'}}">
+    <view
+      class="chip {{priceSort === item.key ? 'active' : ''}}"
+      wx:for="{{sorts}}"
+      wx:for-item="item"
+      wx:key="key"
+      bindtap="onSortTap"
+      data-key="{{item.key}}"
+    >{{item.label}}</view>
+  </view>
+
   <view class="card">
-    <view class="section-title">热门模型价格速览</view>
-    <view class="muted hot-caption">输入 / 输出价，每百万 tokens，人民币换算</view>
-    <view class="hot-row" wx:for="{{hot}}" wx:key="id">
-      <view class="hot-left">
-        <text class="hot-name">{{item.name}}</text>
-        <text class="tag {{item.region === 'cn' ? 'cn' : 'overseas'}}">{{item.provider}}</text>
+    <view class="muted lb-note">{{note}}</view>
+    <view class="lb-row" wx:for="{{rows}}" wx:key="id">
+      <view class="lb-rank {{item.isFree ? 'lb-free' : ''}}">{{item.rank}}</view>
+      <view class="lb-main">
+        <view class="lb-name-line">
+          <text class="lb-name">{{item.name}}</text>
+          <text class="tag">{{item.tagText}}</text>
+        </view>
+        <view class="muted lb-sub">{{item.provider}}<text wx:if="{{item.cnyText}}">  {{item.cnyText}}</text></view>
       </view>
-      <view class="hot-price price-main">{{item.priceText}}</view>
+      <view class="lb-metric price-main">{{item.metric}}</view>
     </view>
   </view>
 
