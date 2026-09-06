@@ -16,17 +16,17 @@ exports.main = async (event) => {
     return { ok: false, error: 'dataset-not-found（请先运行 importData 导入，或使用小程序内置快照）' }
   }
 
-  const { meta, fx, providers, models, plans, free_tiers, aggregators } = doc
+  const { meta, fx, providers, models, plans, free_tiers, aggregators, regions, regional_plans } = doc
   switch (page) {
     case 'home':
       return { ok: true, page, meta, fx, providers, models }
     case 'prices':
       return { ok: true, page, meta, fx, providers, models }
     case 'plans':
-      return { ok: true, page, meta, fx, plans }
+      return { ok: true, page, meta, fx, plans, regions, regional_plans }
     case 'free':
       return { ok: true, page, meta, free_tiers }
     default:
-      return { ok: true, page, meta, fx, providers, models, plans, free_tiers, aggregators }
+      return { ok: true, page, meta, fx, providers, models, plans, free_tiers, aggregators, regions, regional_plans }
   }
 }

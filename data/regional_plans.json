@@ -1,0 +1,42 @@
+{
+  "_readme": "订阅计划地区价格矩阵：价格为当地 App Store 展示的月付原币价格。verified=true 表示 2026-09-06 直接抓取自 apps.apple.com 各地区页面（数据可复核，来源见 source_url）；verified=false 表示来自公开资料、需人工核验。展示时用当期汇率统一换算为人民币。注意：跨区购买可能违反平台服务条款，本工具仅展示信息、不构成任何引导。",
+  "regions": [
+    { "id": "us", "name": "美国", "currency": "USD", "currency_symbol": "$" },
+    { "id": "tr", "name": "土耳其", "currency": "TRY", "currency_symbol": "₺" },
+    { "id": "in", "name": "印度", "currency": "INR", "currency_symbol": "₹" },
+    { "id": "ng", "name": "尼日利亚", "currency": "NGN", "currency_symbol": "₦" },
+    { "id": "jp", "name": "日本", "currency": "JPY", "currency_symbol": "¥" },
+    { "id": "eu", "name": "欧元区", "currency": "EUR", "currency_symbol": "€" }
+  ],
+  "regional_plans": [
+    { "id": "chatgpt-plus-us", "plan_key": "chatgpt-plus", "plan_name": "ChatGPT Plus", "region": "us", "price": 19.99, "currency": "USD", "source_url": "https://apps.apple.com/us/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "chatgpt-plus-tr", "plan_key": "chatgpt-plus", "plan_name": "ChatGPT Plus", "region": "tr", "price": 999.99, "currency": "TRY", "source_url": "https://apps.apple.com/tr/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "chatgpt-plus-in", "plan_key": "chatgpt-plus", "plan_name": "ChatGPT Plus", "region": "in", "price": 1999, "currency": "INR", "source_url": "https://apps.apple.com/in/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "chatgpt-plus-ng", "plan_key": "chatgpt-plus", "plan_name": "ChatGPT Plus", "region": "ng", "price": 31500, "currency": "NGN", "source_url": "https://apps.apple.com/ng/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "chatgpt-plus-jp", "plan_key": "chatgpt-plus", "plan_name": "ChatGPT Plus", "region": "jp", "price": 3000, "currency": "JPY", "source_url": "https://apps.apple.com/jp/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "chatgpt-plus-eu", "plan_key": "chatgpt-plus", "plan_name": "ChatGPT Plus", "region": "eu", "price": 22.99, "currency": "EUR", "source_url": "https://apps.apple.com/de/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+
+    { "id": "chatgpt-go-us", "plan_key": "chatgpt-go", "plan_name": "ChatGPT Go（低价档）", "region": "us", "price": 8.0, "currency": "USD", "source_url": "https://apps.apple.com/us/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "chatgpt-go-tr", "plan_key": "chatgpt-go", "plan_name": "ChatGPT Go（低价档）", "region": "tr", "price": 249.99, "currency": "TRY", "source_url": "https://apps.apple.com/tr/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "chatgpt-go-in", "plan_key": "chatgpt-go", "plan_name": "ChatGPT Go（低价档）", "region": "in", "price": 399, "currency": "INR", "source_url": "https://apps.apple.com/in/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "chatgpt-go-ng", "plan_key": "chatgpt-go", "plan_name": "ChatGPT Go（低价档）", "region": "ng", "price": 6900, "currency": "NGN", "source_url": "https://apps.apple.com/ng/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "chatgpt-go-jp", "plan_key": "chatgpt-go", "plan_name": "ChatGPT Go（低价档）", "region": "jp", "price": 1400, "currency": "JPY", "source_url": "https://apps.apple.com/jp/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "chatgpt-go-eu", "plan_key": "chatgpt-go", "plan_name": "ChatGPT Go（低价档）", "region": "eu", "price": 7.99, "currency": "EUR", "source_url": "https://apps.apple.com/de/app/openai-chatgpt/id6448311069", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+
+    { "id": "claude-pro-us", "plan_key": "claude-pro", "plan_name": "Claude Pro", "region": "us", "price": 20.0, "currency": "USD", "source_url": "https://apps.apple.com/us/app/claude-by-anthropic/id6473753684", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "claude-pro-tr", "plan_key": "claude-pro", "plan_name": "Claude Pro", "region": "tr", "price": 999.99, "currency": "TRY", "source_url": "https://apps.apple.com/tr/app/claude-by-anthropic/id6473753684", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "claude-pro-in", "plan_key": "claude-pro", "plan_name": "Claude Pro", "region": "in", "price": 1999, "currency": "INR", "source_url": "https://apps.apple.com/in/app/claude-by-anthropic/id6473753684", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "claude-pro-ng", "plan_key": "claude-pro", "plan_name": "Claude Pro", "region": "ng", "price": 29900, "currency": "NGN", "source_url": "https://apps.apple.com/ng/app/claude-by-anthropic/id6473753684", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "claude-pro-jp", "plan_key": "claude-pro", "plan_name": "Claude Pro", "region": "jp", "price": 3000, "currency": "JPY", "source_url": "https://apps.apple.com/jp/app/claude-by-anthropic/id6473753684", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "claude-pro-eu", "plan_key": "claude-pro", "plan_name": "Claude Pro", "region": "eu", "price": 22.0, "currency": "EUR", "source_url": "https://apps.apple.com/de/app/claude-by-anthropic/id6473753684", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+
+    { "id": "google-ai-plus-us", "plan_key": "google-ai-plus", "plan_name": "Google AI Plus（2TB）", "region": "us", "price": 9.99, "currency": "USD", "source_url": "https://apps.apple.com/us/app/google-one/id1451784328", "verified": true, "fetched_at": "2026-09-06", "note": "Google 现役低价主力档，经 Google One 应用订阅" },
+    { "id": "google-ai-plus-tr", "plan_key": "google-ai-plus", "plan_name": "Google AI Plus（2TB）", "region": "tr", "price": 359.99, "currency": "TRY", "source_url": "https://apps.apple.com/tr/app/google-one/id1451784328", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "google-ai-plus-in", "plan_key": "google-ai-plus", "plan_name": "Google AI Plus（2TB）", "region": "in", "price": 749, "currency": "INR", "source_url": "https://apps.apple.com/in/app/google-one/id1451784328", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "google-ai-plus-ng", "plan_key": "google-ai-plus", "plan_name": "Google AI Plus（2TB）", "region": "ng", "price": 15000, "currency": "NGN", "source_url": "https://apps.apple.com/ng/app/google-one/id1451784328", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "google-ai-plus-jp", "plan_key": "google-ai-plus", "plan_name": "Google AI Plus（2TB）", "region": "jp", "price": 1450, "currency": "JPY", "source_url": "https://apps.apple.com/jp/app/google-one/id1451784328", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+    { "id": "google-ai-plus-eu", "plan_key": "google-ai-plus", "plan_name": "Google AI Plus（2TB）", "region": "eu", "price": 9.99, "currency": "EUR", "source_url": "https://apps.apple.com/de/app/google-one/id1451784328", "verified": true, "fetched_at": "2026-09-06", "note": "" },
+
+    { "id": "google-ai-pro-us", "plan_key": "google-ai-pro", "plan_name": "Google AI Pro", "region": "us", "price": 19.99, "currency": "USD", "source_url": "https://one.google.ai/about/plans", "verified": false, "fetched_at": "2026-09-06", "note": "App Store 页面未展示该档位，来源为公开资料，需按官网核对；其余地区价格待补充" }
+  ]
+}

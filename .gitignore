@@ -16,3 +16,6 @@ dist/
 
 # ZCode 会话内部文件
 .zcode/
+
+# 抓取临时文件
+/*.html

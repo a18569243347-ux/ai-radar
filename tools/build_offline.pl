@@ -37,6 +37,8 @@ my $models     = load('models')->{models};
 my $plans      = load('plans')->{plans};
 my $free_tiers = load('free_tiers')->{free_tiers};
 my $aggregs    = load('aggregators')->{aggregators};
+my $regions    = load('regional_plans')->{regions};
+my $regional   = load('regional_plans')->{regional_plans};
 
 $meta->{updated_at}   = $now;
 $meta->{source_notes} = ['openrouter: offline 模式跳过', 'deepseek: offline 模式跳过'];
@@ -45,16 +47,18 @@ my $ds = {
     meta        => $meta,
     fx          => {
         base       => 'USD',
-        rates      => { USD => 1.0, CNY => 7.15 },
+        rates      => { USD => 1.0, CNY => 7.15, TRY => 42.0, INR => 88.0, NGN => 1500.0, JPY => 150.0, EUR => 0.92 },
         fetched_at => undef,
         source     => 'seed-default（离线默认值，非实时）',
     },
-    generated_at => $now,
-    providers    => $providers,
-    models       => $models,
-    plans        => $plans,
-    free_tiers   => $free_tiers,
-    aggregators  => $aggregs,
+    generated_at  => $now,
+    providers     => $providers,
+    models        => $models,
+    plans         => $plans,
+    free_tiers    => $free_tiers,
+    aggregators   => $aggregs,
+    regions       => $regions,
+    regional_plans => $regional,
 };
 
 # ---- 校验（与 crawler/validate.py 口径一致的核心项） ----

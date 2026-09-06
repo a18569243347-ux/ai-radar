@@ -4,14 +4,14 @@
 
 import json
 
-CURRENCIES = {"USD", "CNY"}
+CURRENCIES = {"USD", "CNY", "TRY", "INR", "NGN", "JPY", "EUR"}
 TIERS = {"flagship", "mid", "lite", "reasoning", "open", "free"}
 BANNED_WORDS = ["最全", "最低价", "最便宜", "第一名", "最好", "第一品牌"]
 
 
 def validate(ds):
     errors = []
-    for key in ("meta", "fx", "providers", "models", "plans", "free_tiers", "aggregators"):
+    for key in ("meta", "fx", "providers", "models", "plans", "free_tiers", "aggregators", "regions", "regional_plans"):
         if key not in ds:
             errors.append(f"缺少顶层字段 {key}")
     if errors:
@@ -61,6 +61,27 @@ def validate(ds):
     for ag in ds["aggregators"]:
         if not ag.get("compliance_note"):
             errors.append(f"aggregator {ag.get('id')}: 缺 compliance_note（聚合平台必须注明授权/条款情况）")
+
+    region_ids = {r.get("id") for r in ds.get("regions", [])}
+    if len(region_ids) != len(ds.get("regions", [])):
+        errors.append("regions.id 存在重复")
+    rp_ids = set()
+    for rp in ds.get("regional_plans", []):
+        rid = rp.get("id")
+        rp_ids.add(rid)
+        if rp.get("region") not in region_ids:
+            errors.append(f"regional_plan {rid}: 未知 region")
+        if rp.get("currency") not in CURRENCIES:
+            errors.append(f"regional_plan {rid}: 非法币种 {rp.get('currency')}")
+        v = rp.get("price")
+        if not isinstance(v, (int, float)) or v < 0:
+            errors.append(f"regional_plan {rid}: price 非法（{v!r}）")
+        if not rp.get("source_url"):
+            errors.append(f"regional_plan {rid}: 缺 source_url（地区价格必须标注来源）")
+        if not rp.get("plan_name"):
+            errors.append(f"regional_plan {rid}: 缺 plan_name")
+    if len(rp_ids) != len(ds.get("regional_plans", [])):
+        errors.append("regional_plans.id 存在重复")
 
     blob = json.dumps(ds, ensure_ascii=False)
     for w in BANNED_WORDS:

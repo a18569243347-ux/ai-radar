@@ -1,33 +1,66 @@
 <view class="container">
   <view class="banner-warn" wx:if="{{banner}}">{{banner}}</view>
 
-  <view class="muted intro">月付/年付价格与人民币换算，便于跨品牌比较订阅成本。</view>
+  <view class="chips mode-chips">
+    <view class="chip {{mode === 'default' ? 'active' : ''}}" bindtap="onModeTap" data-key="default">订阅计划</view>
+    <view class="chip {{mode === 'regional' ? 'active' : ''}}" bindtap="onModeTap" data-key="regional">地区对比</view>
+  </view>
 
-  <block wx:for="{{groups}}" wx:for-item="group" wx:key="key">
-    <view class="section-title group-title">{{group.title}}</view>
-    <view class="card plan-card" wx:for="{{group.list}}" wx:for-item="pl" wx:key="id">
-      <view class="row-top">
-        <text class="p-name">{{pl.name}}</text>
-        <text class="tag {{pl.region === 'cn' ? 'cn' : 'overseas'}}">{{pl.regionText}}</text>
-        <text class="tag" wx:if="{{pl.isFree}}">免费</text>
+  <block wx:if="{{mode === 'default'}}">
+    <view class="muted intro">月付/年付价格与人民币换算，便于跨品牌比较订阅成本。</view>
+
+    <block wx:for="{{groups}}" wx:for-item="group" wx:key="key">
+      <view class="section-title group-title">{{group.title}}</view>
+      <view class="card plan-card" wx:for="{{group.list}}" wx:for-item="pl" wx:key="id">
+        <view class="row-top">
+          <text class="p-name">{{pl.name}}</text>
+          <text class="tag {{pl.region === 'cn' ? 'cn' : 'overseas'}}">{{pl.regionText}}</text>
+          <text class="tag" wx:if="{{pl.isFree}}">免费</text>
+        </view>
+        <view class="muted">{{pl.provider}}</view>
+        <view class="p-price-line">
+          <text class="p-price price-main">{{pl.priceText}}</text>
+          <text class="p-cny muted" wx:if="{{pl.cnyText}}">{{pl.cnyText}}</text>
+          <text class="p-annual muted" wx:if="{{pl.annualText}}">{{pl.annualText}}</text>
+        </view>
+        <view class="p-highlights">
+          <view class="p-hl" wx:for="{{pl.highlights}}" wx:for-item="hl" wx:key="*this">· {{hl}}</view>
+        </view>
+        <view class="muted p-note" wx:if="{{pl.note}}">注：{{pl.note}}</view>
+        <view class="row-actions">
+          <view class="btn-mini" bindtap="onCopy" data-url="{{pl.url}}">复制官方页面</view>
+        </view>
       </view>
-      <view class="muted">{{pl.provider}}</view>
-      <view class="p-price-line">
-        <text class="p-price price-main">{{pl.priceText}}</text>
-        <text class="p-cny muted" wx:if="{{pl.cnyText}}">{{pl.cnyText}}</text>
-        <text class="p-annual muted" wx:if="{{pl.annualText}}">{{pl.annualText}}</text>
-      </view>
-      <view class="p-highlights">
-        <view class="p-hl" wx:for="{{pl.highlights}}" wx:for-item="hl" wx:key="*this">· {{hl}}</view>
-      </view>
-      <view class="muted p-note" wx:if="{{pl.note}}">注：{{pl.note}}</view>
-      <view class="row-actions">
-        <view class="btn-mini" bindtap="onCopy" data-url="{{pl.url}}">复制官方页面</view>
-      </view>
+    </block>
+
+    <view class="footer-note">
+      订阅权益与档位变化较快，以各官方页面为准；换算仅作参考，非实际支付金额。
     </view>
   </block>
 
-  <view class="footer-note">
-    订阅权益与档位变化较快，以各官方页面为准；换算仅作参考，非实际支付金额。
-  </view>
+  <block wx:if="{{mode === 'regional'}}">
+    <view class="muted intro">{{regionalNote}}</view>
+
+    <block wx:for="{{regionalGroups}}" wx:for-item="group" wx:key="plan_name">
+      <view class="section-title group-title">{{group.plan_name}} · 各地区月价</view>
+      <view class="card">
+        <view class="reg-row" wx:for="{{group.rows}}" wx:for-item="row" wx:key="id">
+          <view class="reg-left">
+            <text class="reg-name">{{row.regionName}}</text>
+            <text class="tag" wx:if="{{!row.verified}}">待核验</text>
+          </view>
+          <view class="reg-right">
+            <view class="reg-local">{{row.localText}}<text class="reg-cny muted" wx:if="{{row.cnyText}}">  {{row.cnyText}}</text></view>
+          </view>
+        </view>
+        <view class="row-actions">
+          <view class="btn-mini" bindtap="onCopy" data-url="{{group.rows[0].url}}">复制来源页（美区）</view>
+        </view>
+      </view>
+    </block>
+
+    <view class="footer-note">
+      同一订阅在不同国家/地区为独立定价；数据抓取自各地区 App Store 公开页面，以当地商店实际展示为准。
+    </view>
+  </block>
 </view>

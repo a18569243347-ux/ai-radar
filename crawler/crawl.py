@@ -58,6 +58,8 @@ def build(offline=False):
     plans = _load("plans")["plans"]
     free_tiers = _load("free_tiers")["free_tiers"]
     aggregators = _load("aggregators")["aggregators"]
+    regions = _load("regional_plans")["regions"]
+    regional_plans = _load("regional_plans")["regional_plans"]
 
     fx = get_fx(offline=offline)
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
@@ -71,6 +73,8 @@ def build(offline=False):
         "plans": plans,
         "free_tiers": free_tiers,
         "aggregators": aggregators,
+        "regions": regions,
+        "regional_plans": regional_plans,
     }
     dataset["meta"]["source_notes"] = run_sources(dataset, {"offline": offline, "fx": fx, "now": now})
     return dataset
