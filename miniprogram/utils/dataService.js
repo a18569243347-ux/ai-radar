@@ -9,8 +9,8 @@
 //
 // 切换后端只改这里，页面代码无需变动。
 const BACKEND = {
-  type: 'worker',
-  workerBase: 'https://airadar.wechatwlxj.top'
+  type: 'cloud',
+  workerBase: 'https://airadar.wechatwlxj.top' // 已弃用，仅保留备用
 }
 
 const bundled = require('../data/dataset.js')

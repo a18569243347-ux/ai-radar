@@ -53,7 +53,7 @@ data/*.json（人工种子）
 - 注意：仓库 60 天没有任何活动，GitHub 会暂停定时任务（会发邮件提醒），推一个 commit 即可恢复。
 
 小程序端读取顺序：**远端数据快照 → 失败则用打包内置的 dataset.js**，所以没配任何后端也能直接跑。
-后端三选一（只改 `miniprogram/utils/dataService.js` 里的 `BACKEND` 配置）：**内置快照**（默认，¥0）· **Cloudflare Workers**（[worker/](worker/README.md)，复用已有 CF 账号，¥0）· **微信云开发**（cloudfunctions/，免费体验套餐）。
+后端三选一（只改 `miniprogram/utils/dataService.js` 里的 `BACKEND` 配置）：**微信云开发**（cloudfunctions/，当前默认）· **Cloudflare Workers**（[worker/](worker/README.md)，¥0 备选）· **内置快照**（¥0，数据随版本更新）。
 
 ## 快速开始
 
