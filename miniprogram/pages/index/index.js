@@ -12,17 +12,8 @@ const HOT_IDS = [
   'moonshot-kimi-k2-5'
 ]
 
-function fmtDate(iso) {
-  if (!iso) return '—'
-  return iso.slice(0, 10)
-}
-
 Page({
   data: {
-    loading: true,
-    dataSource: '',
-    stats: { models: 0, providers: 0, plans: 0 },
-    updatedAt: '—',
     banner: '',
     hot: []
   },
@@ -57,14 +48,6 @@ Page({
         }
       })
       this.setData({
-        loading: false,
-        dataSource: ds._source,
-        stats: {
-          models: (ds.models || []).length,
-          providers: (ds.providers || []).length,
-          plans: (ds.plans || []).length
-        },
-        updatedAt: fmtDate(ds.meta && ds.meta.updated_at),
         banner:
           ds.meta && ds.meta.status === 'seed-pending-review'
             ? '当前为种子数据（待人工核验），价格请以各官方页面为准'
@@ -72,15 +55,5 @@ Page({
         hot
       })
     })
-  },
-
-  goPrices() {
-    wx.switchTab({ url: '/pages/prices/prices' })
-  },
-  goPlans() {
-    wx.switchTab({ url: '/pages/plans/plans' })
-  },
-  goFree() {
-    wx.switchTab({ url: '/pages/free/free' })
   }
 })
