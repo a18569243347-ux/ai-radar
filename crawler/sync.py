@@ -34,7 +34,12 @@ def main():
         url,
         data=DATASET.read_bytes(),
         method="POST",
-        headers={"Content-Type": "application/json", "x-sync-token": token},
+        # User-Agent 必须自报身份：Python-urllib 默认标识会被 Cloudflare 反机器人直接 403
+        headers={
+            "Content-Type": "application/json",
+            "x-sync-token": token,
+            "User-Agent": "ai-radar-crawler/0.1 (data-verification; contact: set-your-email)",
+        },
     )
     with urllib.request.urlopen(req, timeout=60) as resp:
         print(resp.status, resp.read().decode("utf-8", "replace"))
