@@ -8,6 +8,11 @@ on:
 permissions:
   contents: write
 
+# 同一时刻只允许一个运行实例，后续的自动排队——避免两个运行同时改数据产生推送冲突
+concurrency:
+  group: price-sync
+  cancel-in-progress: false
+
 jobs:
   crawl:
     runs-on: ubuntu-latest
@@ -21,14 +26,35 @@ jobs:
       - name: 构建数据集（内容无变化时自动跳过写产物）
         run: python -m crawler.crawl
 
-      - name: 提交数据快照（仅当价格实际变化）
+      - name: 提交数据快照（自动变基 + 冲突让位 + 重试）
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add miniprogram/data/dataset.js
           git add -f dist/dataset.json dist/.data-hash
-          git diff --cached --quiet || git commit -m "chore(data): 价格更新 $(date -u +%F-%H:%M)"
-          git push
+          if git diff --cached --quiet; then
+            echo "无数据变化，跳过提交"
+            exit 0
+          fi
+          git commit -m "chore(data): 价格更新 $(date -u +%F-%H:%M)"
+          for i in 1 2 3; do
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push; then
+                echo "推送成功（第 $i 次尝试）"
+                exit 0
+              fi
+              echo "推送被拒（远端又有新提交），20 秒后重试 $i/3"
+              sleep 20
+            else
+              git rebase --abort
+              git reset --hard origin/main
+              echo "远端已有同批数据更新，本次提交让位（下个周期自动补偿）"
+              exit 0
+            fi
+          done
+          echo "三次推送均失败"
+          exit 1
 
       - name: 上传构建产物（仅变化时）
         if: ${{ hashFiles('dist/.changed') != '' }}
