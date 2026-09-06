@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="card">
+    <view class="section-title">数据说明</view>
+    <view class="a-line">更新频率：{{meta.update_cadence}}</view>
+    <view class="a-line">口径说明：{{meta.region_note}}</view>
+    <view class="a-line" wx:if="{{fx}}">汇率口径：{{fx.source}}（USD/CNY = {{fx.rates.CNY}}）</view>
+    <view class="a-line">数据状态：{{statusText}} · 版本 v{{version}} · 来源：{{dataSource}}</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">免责声明</view>
+    <view class="a-line">{{meta.disclaimer}}</view>
+    <view class="a-line">{{meta.content_policy}}</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">数据来源（官方定价页）</view>
+    <view class="src-row" wx:for="{{sources}}" wx:key="id">
+      <text class="src-name">{{item.name}}</text>
+      <text class="btn-mini" bindtap="onCopy" data-url="{{item.url}}">复制链接</text>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">更新日志</view>
+    <view class="a-line" wx:for="{{meta.changelog}}" wx:key="date" wx:if="{{meta.changelog}}">
+      {{item.date}} · {{item.note}}
+    </view>
+  </view>
+
+  <view class="footer-note">
+    AI雷达 · 仅供个人学习与选型参考 · 如价格信息有误，请以官方页面为准
+  </view>
+</view>

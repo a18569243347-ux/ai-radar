@@ -1,0 +1,21 @@
+.a-line {
+  color: #475467;
+  font-size: 26rpx;
+  margin-bottom: 14rpx;
+}
+
+.src-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14rpx 0;
+  border-bottom: 2rpx solid #F0F2F5;
+}
+
+.src-row:last-child {
+  border-bottom: none;
+}
+
+.src-name {
+  font-size: 26rpx;
+}

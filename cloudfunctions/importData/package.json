@@ -1,0 +1,9 @@
+{
+  "name": "importData",
+  "version": "1.0.0",
+  "description": "接收 CI 推送的数据集快照并写入云数据库",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

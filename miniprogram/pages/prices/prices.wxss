@@ -1,0 +1,42 @@
+.toolbar .muted {
+  margin-top: 4rpx;
+}
+
+.model-row .muted {
+  margin-top: 4rpx;
+}
+
+.row-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rpx;
+}
+
+.m-name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.price-grid {
+  display: flex;
+  gap: 40rpx;
+  margin-top: 16rpx;
+}
+
+.pcell .plabel {
+  font-size: 22rpx;
+}
+
+.pcell .pval {
+  font-size: 32rpx;
+}
+
+.row-note {
+  margin-top: 12rpx;
+  font-size: 22rpx;
+}
+
+.row-actions {
+  margin-top: 16rpx;
+}

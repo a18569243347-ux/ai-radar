@@ -1,0 +1,24 @@
+.intro {
+  margin-bottom: 20rpx;
+}
+
+.row-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.f-name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.f-detail {
+  margin-top: 10rpx;
+  color: #475467;
+  font-size: 26rpx;
+}
+
+.row-actions {
+  margin-top: 16rpx;
+}

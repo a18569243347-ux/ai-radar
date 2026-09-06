@@ -1,0 +1,10 @@
+name = "ai-radar-dataset"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# 部署前：
+#   1. wrangler kv namespace create DATASET  → 把返回的 id 填到下面
+#   2. wrangler secret put SYNC_TOKEN        → 输入与 GitHub Secrets 一致的 token
+[[kv_namespaces]]
+binding = "DATASET"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"

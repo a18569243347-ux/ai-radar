@@ -1,0 +1,9 @@
+{
+  "desc": "AI雷达：AI 模型与订阅价格信息查询工具",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

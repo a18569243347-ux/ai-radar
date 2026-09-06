@@ -1,0 +1,70 @@
+.hero-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  letter-spacing: 2rpx;
+}
+
+.hero-sub {
+  margin-top: 8rpx;
+}
+
+.hero-meta {
+  margin-top: 16rpx;
+}
+
+.nav-grid {
+  display: flex;
+  gap: 20rpx;
+  margin-bottom: 24rpx;
+}
+
+.nav-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 24rpx 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(31, 42, 68, 0.06);
+}
+
+.nav-emoji {
+  font-size: 40rpx;
+}
+
+.nav-name {
+  font-weight: 600;
+  margin: 8rpx 0 4rpx;
+}
+
+.nav-card .muted {
+  font-size: 20rpx;
+}
+
+.hot-caption {
+  margin-bottom: 8rpx;
+}
+
+.hot-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18rpx 0;
+  border-bottom: 2rpx solid #F0F2F5;
+}
+
+.hot-row:last-child {
+  border-bottom: none;
+}
+
+.hot-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hot-name {
+  font-weight: 500;
+}
+
+.hot-price {
+  font-size: 26rpx;
+}

@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="banner-warn" wx:if="{{banner}}">{{banner}}</view>
+
+  <view class="card toolbar">
+    <view class="chips">
+      <view
+        class="chip {{region === item.key ? 'active' : ''}}"
+        wx:for="{{regionTabs}}"
+        wx:for-item="item"
+        wx:key="key"
+        bindtap="onRegionTap"
+        data-key="{{item.key}}"
+      >{{item.label}}</view>
+    </view>
+    <view class="chips">
+      <view
+        class="chip {{sortBy === item.key ? 'active' : ''}}"
+        wx:for="{{sorts}}"
+        wx:for-item="item"
+        wx:key="key"
+        bindtap="onSortTap"
+        data-key="{{item.key}}"
+      >{{item.label}}</view>
+      <view class="chip {{display === 'CNY' ? 'active' : ''}}" bindtap="onCurrencyTap" data-key="CNY">¥ CNY</view>
+      <view class="chip {{display === 'USD' ? 'active' : ''}}" bindtap="onCurrencyTap" data-key="USD">$ USD</view>
+    </view>
+    <view class="muted">共 {{count}} 个模型 · 价格为每百万 tokens · 点击卡片底部可复制官网链接</view>
+  </view>
+
+  <view class="card model-row" wx:for="{{rows}}" wx:key="id">
+    <view class="row-top">
+      <text class="m-name">{{item.name}}</text>
+      <text class="tag {{item.region === 'cn' ? 'cn' : 'overseas'}}">{{item.regionText}}</text>
+      <text class="tag {{item.isFree ? 'free' : (item.isOpen ? 'open' : '')}}">{{item.tierText}}</text>
+    </view>
+    <view class="muted">{{item.provider}} · 上下文 {{item.context}}</view>
+    <view class="price-grid">
+      <view class="pcell">
+        <view class="plabel muted">输入</view>
+        <view class="pval price-main">{{item.inText}}</view>
+      </view>
+      <view class="pcell">
+        <view class="plabel muted">输出</view>
+        <view class="pval price-main">{{item.outText}}</view>
+      </view>
+      <view class="pcell" wx:if="{{item.cachedText}}">
+        <view class="plabel muted">缓存命中输入</view>
+        <view class="pval price-main">{{item.cachedText}}</view>
+      </view>
+    </view>
+    <view class="row-note muted" wx:if="{{item.note}}">注：{{item.note}}</view>
+    <view class="row-actions">
+      <view class="btn-mini" bindtap="onCopy" data-url="{{item.url}}">复制官网定价链接</view>
+    </view>
+  </view>
+
+  <view class="footer-note">
+    价格整理自各官方公开页面，可能存在阶梯计费/区域差异，以官方页面实时价格为准。
+  </view>
+</view>

@@ -1,0 +1,17 @@
+{
+  "_readme": "免费资源清单。type 取值：免费模型 / 免费额度 / 新用户赠送 / 免费App。额度规则变化快，需定期核对。",
+  "free_tiers": [
+    { "id": "zhipu-glm-flash", "provider": "zhipu", "name": "智谱 GLM-4-Flash 系列", "type": "免费模型", "detail": "GLM-4-Flash、GLM-4.5-Flash 等轻量模型 API 完全免费调用。", "url": "https://open.bigmodel.cn/pricing" },
+    { "id": "baidu-ernie-free", "provider": "baidu", "name": "百度 ERNIE Speed / Lite", "type": "免费模型", "detail": "千帆平台部分轻量 ERNIE 模型免费开放（留意免费政策有效期）。", "url": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7" },
+    { "id": "google-gemini-free", "provider": "google", "name": "Gemini API 免费层", "type": "免费额度", "detail": "Flash 系列提供免费配额（每分钟/每日请求上限），适合个人开发调试。", "url": "https://ai.google.dev/gemini-api/docs/pricing" },
+    { "id": "openrouter-free", "provider": "openrouter", "name": "OpenRouter :free 模型", "type": "免费额度", "detail": "带 :free 后缀的模型可免费调用，默认约 50 次/天；账户充值 $10 后提升至约 1000 次/天。", "url": "https://openrouter.ai/models?max_price=0" },
+    { "id": "groq-free", "provider": "groq", "name": "Groq 免费层", "type": "免费额度", "detail": "开源模型（Llama、Qwen 等）高速推理，免费层有速率与每日额度限制。", "url": "https://groq.com" },
+    { "id": "github-models", "provider": "github", "name": "GitHub Models", "type": "免费额度", "detail": "免费试用 GPT、Claude、Gemini、Llama 等模型（速率限额），适合原型验证。", "url": "https://github.com/marketplace/models" },
+    { "id": "mistral-free", "provider": "mistral", "name": "Mistral La Plateforme 免费层", "type": "免费额度", "detail": "注册后可获得免费实验层，含部分模型 API 额度。", "url": "https://console.mistral.ai" },
+    { "id": "cloudflare-wai", "provider": "cloudflare", "name": "Cloudflare Workers AI", "type": "免费额度", "detail": "每日赠送一定量 neurons，可调用多种开源模型。", "url": "https://developers.cloudflare.com/workers-ai/" },
+    { "id": "nvidia-nim", "provider": "nvidia", "name": "NVIDIA NIM 试用", "type": "免费额度", "detail": "赠送试用 credits，可调用多种开源模型 API。", "url": "https://build.nvidia.com" },
+    { "id": "siliconflow-gift", "provider": "siliconflow", "name": "硅基流动新用户礼包", "type": "新用户赠送", "detail": "注册赠送等值约 ¥14 的额度，可用于多款开源模型（以官方活动页为准）。", "url": "https://siliconflow.cn" },
+    { "id": "aliyun-free-trial", "provider": "aliyun", "name": "阿里百炼新用户额度", "type": "新用户赠送", "detail": "多款模型各赠送约 100 万 tokens（有效期 90/180 天，以官方页为准）。", "url": "https://www.aliyun.com/product/bailian" },
+    { "id": "free-cn-apps", "provider": "volcengine", "name": "国内主流 AI App 免费可用", "type": "免费App", "detail": "豆包、腾讯元宝、通义、Kimi 等对话 App 基础功能免费，无需 API key。", "url": "https://www.doubao.com" }
+  ]
+}

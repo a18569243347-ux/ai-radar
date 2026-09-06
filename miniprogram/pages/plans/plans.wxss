@@ -1,0 +1,47 @@
+.intro {
+  margin-bottom: 20rpx;
+}
+
+.group-title {
+  margin-top: 16rpx;
+}
+
+.row-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.p-name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.p-price-line {
+  display: flex;
+  align-items: baseline;
+  gap: 16rpx;
+  margin: 12rpx 0 8rpx;
+  flex-wrap: wrap;
+}
+
+.p-price {
+  font-size: 34rpx;
+}
+
+.p-highlights {
+  margin-top: 8rpx;
+}
+
+.p-hl {
+  color: #475467;
+  font-size: 26rpx;
+}
+
+.p-note {
+  margin-top: 8rpx;
+}
+
+.row-actions {
+  margin-top: 16rpx;
+}

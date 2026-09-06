@@ -1,0 +1,19 @@
+{
+  "providers": [
+    { "id": "openai", "name": "OpenAI", "region": "overseas", "country": "美国", "currency": "USD", "site": "https://openai.com", "pricing_url": "https://openai.com/api/pricing/" },
+    { "id": "anthropic", "name": "Anthropic", "region": "overseas", "country": "美国", "currency": "USD", "site": "https://www.anthropic.com", "pricing_url": "https://docs.anthropic.com/en/docs/about-claude/pricing" },
+    { "id": "google", "name": "Google Gemini", "region": "overseas", "country": "美国", "currency": "USD", "site": "https://ai.google.dev", "pricing_url": "https://ai.google.dev/gemini-api/docs/pricing" },
+    { "id": "xai", "name": "xAI", "region": "overseas", "country": "美国", "currency": "USD", "site": "https://x.ai", "pricing_url": "https://docs.x.ai/docs/models" },
+    { "id": "meta", "name": "Meta Llama", "region": "overseas", "country": "美国", "currency": "USD", "site": "https://www.llama.com", "pricing_url": "https://www.llama.com/" },
+    { "id": "mistral", "name": "Mistral AI", "region": "overseas", "country": "法国", "currency": "USD", "site": "https://mistral.ai", "pricing_url": "https://mistral.ai/pricing" },
+    { "id": "deepseek", "name": "DeepSeek", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://www.deepseek.com", "pricing_url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing" },
+    { "id": "aliyun", "name": "阿里云百炼", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://www.aliyun.com/product/bailian", "pricing_url": "https://help.aliyun.com/zh/model-studio/models" },
+    { "id": "volcengine", "name": "火山方舟（豆包）", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://www.volcengine.com/product/ark", "pricing_url": "https://www.volcengine.com/docs/82379/1099320" },
+    { "id": "moonshot", "name": "Kimi 开放平台", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://platform.moonshot.cn", "pricing_url": "https://platform.moonshot.cn/docs/price/chat" },
+    { "id": "zhipu", "name": "智谱开放平台", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://open.bigmodel.cn", "pricing_url": "https://open.bigmodel.cn/pricing" },
+    { "id": "minimax", "name": "MiniMax 开放平台", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://www.minimaxi.com", "pricing_url": "https://platform.minimaxi.com" },
+    { "id": "baidu", "name": "百度千帆", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://cloud.baidu.com/product/wenxinworkshop", "pricing_url": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7" },
+    { "id": "tencent", "name": "腾讯混元", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://cloud.tencent.com/product/hunyuan", "pricing_url": "https://cloud.tencent.com/document/product/1729/97731" },
+    { "id": "stepfun", "name": "阶跃星辰", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://www.stepfun.com", "pricing_url": "https://platform.stepfun.com" }
+  ]
+}

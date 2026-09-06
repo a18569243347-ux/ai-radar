@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="muted intro">可以直接白嫖的模型与额度。免费政策变化较快，以官方页面为准。</view>
+
+  <block wx:for="{{groups}}" wx:for-item="group" wx:key="type">
+    <view class="section-title">{{group.type}}</view>
+    <view class="card free-card" wx:for="{{group.list}}" wx:for-item="ft" wx:key="id">
+      <view class="row-top">
+        <text class="f-name">{{ft.name}}</text>
+        <text class="tag free">{{ft.type}}</text>
+      </view>
+      <view class="muted">{{ft.provider}}</view>
+      <view class="f-detail">{{ft.detail}}</view>
+      <view class="row-actions">
+        <view class="btn-mini" bindtap="onCopy" data-url="{{ft.url}}">复制官方链接</view>
+      </view>
+    </view>
+  </block>
+
+  <view class="footer-note">
+    免费额度通常有速率/次数/有效期限制，商用请阅读各平台服务条款。
+  </view>
+</view>

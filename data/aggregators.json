@@ -1,0 +1,44 @@
+{
+  "_readme": "合规聚合平台：只收录有官方授权、条款公开透明的平台或厂商官方站点。不收录无授权转售 OpenAI/Anthropic 等 API 的『中转站』（违反其服务条款，且面临监管整治）。prices 字段由 CI 从 OpenRouter 公开 API 自动更新。",
+  "aggregators": [
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "type": "聚合网关",
+      "official": true,
+      "currency": "USD",
+      "url": "https://openrouter.ai/models",
+      "compliance_note": "与上游厂商合作的正规转售模式，定价与条款公开透明。",
+      "fee_note": "各模型价格通常为官方价 + 约 5% 服务费，胜在统一接口与免费模型。",
+      "regions": ["overseas"],
+      "auto_source": "openrouter_api",
+      "prices": []
+    },
+    {
+      "id": "siliconflow",
+      "name": "硅基流动 SiliconFlow",
+      "type": "模型云平台",
+      "official": true,
+      "currency": "CNY",
+      "url": "https://siliconflow.cn",
+      "compliance_note": "国内合规云平台，以开源模型托管推理为主，国内可直接注册与支付。",
+      "fee_note": "开源模型价格常与厂商官方价持平或略低。",
+      "regions": ["cn"],
+      "auto_source": null,
+      "prices": []
+    },
+    {
+      "id": "modelstudio-intl",
+      "name": "阿里云百炼国际站 Model Studio",
+      "type": "厂商官方国际站",
+      "official": true,
+      "currency": "USD",
+      "url": "https://www.alibabacloud.com/en/product/modelstudio",
+      "compliance_note": "厂商官方国际站点，与国内百炼的价差即为典型的区域定价差异。",
+      "fee_note": "国际站以美元计价，模型档位与国内站略有不同。",
+      "regions": ["overseas"],
+      "auto_source": null,
+      "prices": []
+    }
+  ]
+}

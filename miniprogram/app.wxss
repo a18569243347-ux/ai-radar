@@ -1,0 +1,118 @@
+/* AI雷达 全局样式 */
+page {
+  background: #F5F7FB;
+  color: #1F2A44;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(31, 42, 68, 0.06);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin: 8rpx 0 20rpx;
+}
+
+.muted {
+  color: #98A2B3;
+  font-size: 24rpx;
+}
+
+.banner-warn {
+  background: #FFF7E8;
+  color: #B25E09;
+  border-radius: 16rpx;
+  padding: 16rpx 24rpx;
+  font-size: 24rpx;
+  margin-bottom: 24rpx;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 20rpx;
+  line-height: 1;
+  padding: 8rpx 14rpx;
+  border-radius: 8rpx;
+  background: #EEF2FF;
+  color: #4F7CFF;
+  margin-left: 12rpx;
+  vertical-align: middle;
+}
+
+.tag.overseas {
+  background: #EEF2FF;
+  color: #4F7CFF;
+}
+
+.tag.cn {
+  background: #E8F7EF;
+  color: #12855F;
+}
+
+.tag.free {
+  background: #E8F7EF;
+  color: #12855F;
+}
+
+.tag.open {
+  background: #F4F5F7;
+  color: #667085;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.chip {
+  font-size: 24rpx;
+  padding: 10rpx 24rpx;
+  border-radius: 999rpx;
+  background: #F4F5F7;
+  color: #475467;
+}
+
+.chip.active {
+  background: #4F7CFF;
+  color: #FFFFFF;
+}
+
+.price-main {
+  font-weight: 700;
+  color: #4F7CFF;
+}
+
+.footer-note {
+  color: #98A2B3;
+  font-size: 22rpx;
+  text-align: center;
+  padding: 24rpx 24rpx 48rpx;
+}
+
+.btn-mini {
+  font-size: 24rpx;
+  color: #4F7CFF;
+  background: #EEF2FF;
+  border-radius: 999rpx;
+  padding: 10rpx 24rpx;
+  display: inline-block;
+}
+
+.divider {
+  height: 2rpx;
+  background: #F0F2F5;
+  margin: 20rpx 0;
+}

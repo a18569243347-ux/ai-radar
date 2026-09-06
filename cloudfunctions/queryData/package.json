@@ -1,0 +1,9 @@
+{
+  "name": "queryData",
+  "version": "1.0.0",
+  "description": "小程序端读取数据集快照",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

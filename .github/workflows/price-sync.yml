@@ -1,0 +1,50 @@
+name: price-sync
+
+on:
+  schedule:
+    - cron: "13,43 * * * *" # 每 30 分钟核对一次（避开整点调度高峰；GitHub 实际执行可能有几分钟延迟）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 构建数据集（内容无变化时自动跳过写产物）
+        run: python -m crawler.crawl
+
+      - name: 提交数据快照（仅当价格实际变化）
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add miniprogram/data/dataset.js
+          git add -f dist/dataset.json dist/.data-hash
+          git diff --cached --quiet || git commit -m "chore(data): 价格更新 $(date -u +%F-%H:%M)"
+          git push
+
+      - name: 上传构建产物（仅变化时）
+        if: ${{ hashFiles('dist/.changed') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: dataset
+          path: dist/dataset.json
+
+      - name: 同步到云数据库（仅变化时，需先配置 Secrets）
+        if: ${{ hashFiles('dist/.changed') != '' }}
+        env:
+          CLOUD_IMPORT_URL: ${{ secrets.CLOUD_IMPORT_URL }}
+          SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
+        run: |
+          if [ -n "$CLOUD_IMPORT_URL" ] && [ -n "$SYNC_TOKEN" ]; then
+            python -m crawler.sync
+          else
+            echo "未配置 CLOUD_IMPORT_URL / SYNC_TOKEN，跳过云同步（数据仍会随小程序发版更新）"
+          fi

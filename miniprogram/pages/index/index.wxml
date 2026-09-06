@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="banner-warn" wx:if="{{banner}}">{{banner}}</view>
+
+  <view class="hero card">
+    <view class="hero-title">AI雷达</view>
+    <view class="hero-sub muted">中外主流 AI 大厂 API 与订阅价格速查 · 每日自动更新</view>
+    <view class="hero-meta muted">数据更新：{{updatedAt}} · 共 {{stats.models}} 个模型 / {{stats.providers}} 家厂商</view>
+  </view>
+
+  <view class="nav-grid">
+    <view class="nav-card" bindtap="goPrices">
+      <view class="nav-emoji">💰</view>
+      <view class="nav-name">API 价格对比</view>
+      <view class="muted">每百万 tokens 输入/输出价</view>
+    </view>
+    <view class="nav-card" bindtap="goPlans">
+      <view class="nav-emoji">📦</view>
+      <view class="nav-name">订阅计划</view>
+      <view class="muted">Plus / Pro / 会员换算</view>
+    </view>
+    <view class="nav-card" bindtap="goFree">
+      <view class="nav-emoji">🎁</view>
+      <view class="nav-name">免费资源</view>
+      <view class="muted">免费模型与试用额度</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">热门模型价格速览</view>
+    <view class="muted hot-caption">输入 / 输出价，每百万 tokens，人民币换算</view>
+    <view class="hot-row" wx:for="{{hot}}" wx:key="id">
+      <view class="hot-left">
+        <text class="hot-name">{{item.name}}</text>
+        <text class="tag {{item.region === 'cn' ? 'cn' : 'overseas'}}">{{item.provider}}</text>
+      </view>
+      <view class="hot-price price-main">{{item.priceText}}</view>
+    </view>
+  </view>
+
+  <view class="footer-note">
+    价格整理自公开网络，仅供参考，以各官方页面为准；本工具不构成购买建议。
+  </view>
+</view>
