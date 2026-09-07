@@ -48,6 +48,23 @@ function fromWorker() {
   })
 }
 
+// 云端数据可能缺 benchmarks 或部分新模型（旧快照），用内置 bundle 补齐。
+// 在数据源头统一合并，保证下游 render() 拿到的始终是完整数据集，杜绝刷新后数据丢失。
+function mergeWithBundle(remote) {
+  const merged = { ...(remote || {}), ok: true, _source: 'cloud+bundle' }
+  // benchmarks：云端 scores 为空或缺失时用 bundle 兜底
+  const cloudBm = merged.benchmarks
+  if (!cloudBm || !Array.isArray(cloudBm.scores) || cloudBm.scores.length === 0) {
+    merged.benchmarks = bundled.benchmarks || {}
+  }
+  // models：用 bundle 补齐云端缺失的模型（按 id 去重，云端优先）
+  const cloudModels = merged.models || []
+  const cloudIds = new Set(cloudModels.map((m) => m.id))
+  const missing = (bundled.models || []).filter((m) => !cloudIds.has(m.id))
+  merged.models = cloudModels.concat(missing)
+  return merged
+}
+
 function fetchRemote() {
   if (BACKEND.type === 'cloud') return fromCloud()
   if (BACKEND.type === 'worker') return fromWorker()
@@ -61,7 +78,7 @@ function getDataset(opts) {
   if (_loading) return _loading
   _loading = fetchRemote()
     .then((r) => {
-      _cache = { ...r, ok: true, _source: BACKEND.type }
+      _cache = mergeWithBundle(r)
       return _cache
     })
     .catch((e) => {

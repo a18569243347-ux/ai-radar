@@ -1,6 +1,5 @@
 const { getDataset, providerMap } = require('../../utils/dataService')
 const { toCNY, toUSD, fmtMoney, tierLabel } = require('../../utils/format')
-const bundled = require('../../data/dataset.js')
 
 const BOARDS = [
   { key: 'price', label: '价格榜' },
@@ -55,13 +54,7 @@ Page({
       const pmap = providerMap(ds)
       const fx = ds.fx || { rates: { CNY: 7.15 } }
 
-      // 云端 models 可能是旧快照（缺新模型），用内置 bundle 补齐缺失的模型条目，
-      // 保证 DeepSeek 本位榜的基准模型和有分数模型都能找到。以 id 去重，云端优先。
-      const cloudModels = (ds.models || [])
-      const bundledModels = (bundled.models || []).filter((bm) => !cloudModels.some((cm) => cm.id === bm.id))
-      const allModels = cloudModels.concat(bundledModels)
-
-      this._modelRows = allModels
+      this._modelRows = (ds.models || [])
         .filter((m) => m.price != null)
         .map((m) => {
           const p = m.price
@@ -102,15 +95,10 @@ Page({
 
       this._scores = {}
       this._excluded = []
-      // 云端 benchmarks.scores 异常为空时，用内置 bundle 兜底（跑分数据本就源自本地 data/benchmarks.json，
-      // 云端只是镜像；云端链路不稳时直接用内置值，保证 DeepSeek 本位榜可用）
-      const cloudBm = (ds.benchmarks && Array.isArray(ds.benchmarks.scores) && ds.benchmarks.scores.length > 0)
-        ? ds.benchmarks
-        : (bundled.benchmarks || {})
-      ;(((cloudBm || {}).scores) || []).forEach((s) => {
+      ;(((ds.benchmarks || {}).scores) || []).forEach((s) => {
         if (s.model_id != null && s.arena_score != null) this._scores[s.model_id] = s.arena_score
       })
-      this._excluded = (((cloudBm || {}).excluded) || []).map((e) => ({
+      this._excluded = (((ds.benchmarks || {}).excluded) || []).map((e) => ({
         model_id: e.model_id,
         reason: e.reason
       }))
