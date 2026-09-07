@@ -31,9 +31,17 @@
   flex-shrink: 0;
 }
 
-.lb-free {
+.lb-row.excluded {
+  opacity: 0.5;
+}
+
+.lb-rank.lb-base {
   font-size: 22rpx;
-  color: #12855F;
+  color: #B54708;
+}
+
+.lb-rank.excluded {
+  color: #8A94A6;
 }
 
 .lb-main {

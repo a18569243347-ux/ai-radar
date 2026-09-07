@@ -27,12 +27,12 @@
 
   <view class="card">
     <view class="muted lb-note">{{note}}</view>
-    <view class="lb-row" wx:for="{{rows}}" wx:key="id">
-      <view class="lb-rank {{item.isFree ? 'lb-free' : ''}}">{{item.rank}}</view>
+    <view class="lb-row {{item.excluded ? 'excluded' : ''}}" wx:for="{{rows}}" wx:key="id">
+      <view class="lb-rank {{item.isBase ? 'lb-base' : ''}} {{item.excluded ? 'excluded' : ''}}">{{item.rank}}</view>
       <view class="lb-main">
         <view class="lb-name-line">
           <text class="lb-name">{{item.name}}</text>
-          <text class="tag">{{item.tagText}}</text>
+          <text class="tag">{{item.isBase ? '基准' : item.tagText}}</text>
         </view>
         <view class="muted lb-sub">{{item.provider}}<text wx:if="{{item.cnyText}}">  {{item.cnyText}}</text></view>
       </view>
