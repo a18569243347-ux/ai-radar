@@ -1,14 +1,6 @@
 <view class="container">
   <view class="banner-warn" wx:if="{{banner}}">{{banner}}</view>
 
-  <view class="scan-entry" bindtap="onScan">
-    <view class="scan-emoji">📷</view>
-    <view class="scan-text">
-      <view class="scan-title">扫一扫</view>
-      <view class="muted scan-sub">支持小程序码 / 链接类二维码</view>
-    </view>
-  </view>
-
   <scroll-view scroll-x class="board-chips">
     <view class="chips chips-line">
       <view
