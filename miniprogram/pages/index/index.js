@@ -55,7 +55,13 @@ Page({
       const pmap = providerMap(ds)
       const fx = ds.fx || { rates: { CNY: 7.15 } }
 
-      this._modelRows = (ds.models || [])
+      // 云端 models 可能是旧快照（缺新模型），用内置 bundle 补齐缺失的模型条目，
+      // 保证 DeepSeek 本位榜的基准模型和有分数模型都能找到。以 id 去重，云端优先。
+      const cloudModels = (ds.models || [])
+      const bundledModels = (bundled.models || []).filter((bm) => !cloudModels.some((cm) => cm.id === bm.id))
+      const allModels = cloudModels.concat(bundledModels)
+
+      this._modelRows = allModels
         .filter((m) => m.price != null)
         .map((m) => {
           const p = m.price
