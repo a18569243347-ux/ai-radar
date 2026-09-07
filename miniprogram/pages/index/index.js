@@ -1,5 +1,6 @@
 const { getDataset, providerMap } = require('../../utils/dataService')
 const { toCNY, toUSD, fmtMoney, tierLabel } = require('../../utils/format')
+const bundled = require('../../data/dataset.js')
 
 const BOARDS = [
   { key: 'price', label: '价格榜' },
@@ -95,10 +96,15 @@ Page({
 
       this._scores = {}
       this._excluded = []
-      ;(((ds.benchmarks || {}).scores) || []).forEach((s) => {
+      // 云端 benchmarks.scores 异常为空时，用内置 bundle 兜底（跑分数据本就源自本地 data/benchmarks.json，
+      // 云端只是镜像；云端链路不稳时直接用内置值，保证 DeepSeek 本位榜可用）
+      const cloudBm = (ds.benchmarks && Array.isArray(ds.benchmarks.scores) && ds.benchmarks.scores.length > 0)
+        ? ds.benchmarks
+        : (bundled.benchmarks || {})
+      ;(((cloudBm || {}).scores) || []).forEach((s) => {
         if (s.model_id != null && s.arena_score != null) this._scores[s.model_id] = s.arena_score
       })
-      this._excluded = (((ds.benchmarks || {}).excluded) || []).map((e) => ({
+      this._excluded = (((cloudBm || {}).excluded) || []).map((e) => ({
         model_id: e.model_id,
         reason: e.reason
       }))
