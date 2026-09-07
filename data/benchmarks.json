@@ -1,5 +1,4 @@
 {
-  "_readme": "性能分数数据结构。分数取自 Artificial Analysis Intelligence Index（综合公开跑分，0-100 量纲，与 arena elo 同向）。各分数标注 verified=false 表示种子数据、尚未人工复核；代理匹配的条目在 aa_name 中注明。DeepSeek 本位榜以 deepseek-v4-flash-max-20260731（分数=41）为基准计算性价比。",
   "source": "Artificial Analysis Intelligence Index (https://artificialanalysis.ai/leaderboards/models)",
   "source_note": "前端渲染抓取于 2026-09-07；Intelligence Index 为公开跑分综合指标，跨来源勿直接比较",
   "as_of": "2026-09-07",
