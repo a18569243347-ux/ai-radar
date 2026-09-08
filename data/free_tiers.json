@@ -12,6 +12,10 @@
     { "id": "nvidia-nim", "provider": "nvidia", "name": "NVIDIA NIM 试用", "type": "免费额度", "detail": "赠送试用 credits，可调用多种开源模型 API。", "url": "https://build.nvidia.com" },
     { "id": "siliconflow-gift", "provider": "siliconflow", "name": "硅基流动新用户礼包", "type": "新用户赠送", "detail": "注册赠送等值约 ¥14 的额度，可用于多款开源模型（以官方活动页为准）。", "url": "https://siliconflow.cn" },
     { "id": "aliyun-free-trial", "provider": "aliyun", "name": "阿里百炼新用户额度", "type": "新用户赠送", "detail": "多款模型各赠送约 100 万 tokens（有效期 90/180 天，以官方页为准）。", "url": "https://www.aliyun.com/product/bailian" },
-    { "id": "free-cn-apps", "provider": "volcengine", "name": "国内主流 AI App 免费可用", "type": "免费App", "detail": "豆包、腾讯元宝、通义、Kimi 等对话 App 基础功能免费，无需 API key。", "url": "https://www.doubao.com" }
+    { "id": "free-cn-apps", "provider": "volcengine", "name": "国内主流 AI App 免费可用", "type": "免费App", "detail": "豆包、腾讯元宝、通义、Kimi 等对话 App 基础功能免费，无需 API key。", "url": "https://www.doubao.com" },
+    { "id": "modelscope-free", "provider": "modelscope", "name": "魔搭 ModelScope 免费推理", "type": "免费额度", "detail": "阿里达摩院官方模型社区，免费 API 推理约 2000 次/天，含 DeepSeek-V4-Pro/Flash、GLM-5、Qwen3-235B 等开源与商用模型，OpenAI 兼容格式。", "url": "https://modelscope.cn" },
+    { "id": "internai-free", "provider": "internai", "name": "书生 Intern AI 免费 API", "type": "免费额度", "detail": "上海 AI 实验室官方平台，注册可获免费 API key（有效期 6 个月），约 10 次/分钟，OpenAI 兼容格式。", "url": "https://chat.intern-ai.org.cn" },
+    { "id": "cohere-free", "provider": "cohere", "name": "Cohere 免费层", "type": "免费额度", "detail": "注册可获 Trial Key（约 20 次/分钟），含 command 系列模型；绑定支付方式后可升级为更宽松的 Production Key。", "url": "https://cohere.com/pricing" },
+    { "id": "llm7-free", "provider": "openrouter", "name": "LLM7 社区免费 API", "type": "免费额度", "detail": "社区维护的免费 OpenAI 兼容 API（2 次/秒、20 次/分、100 次/时），含 gpt-oss-20b、GLM-4.6V-Flash 等模型，无需注册。长期可用性以官方页面为准。", "url": "https://llm7.io" }
   ]
 }

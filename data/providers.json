@@ -14,6 +14,9 @@
     { "id": "minimax", "name": "MiniMax 开放平台", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://www.minimaxi.com", "pricing_url": "https://platform.minimaxi.com" },
     { "id": "baidu", "name": "百度千帆", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://cloud.baidu.com/product/wenxinworkshop", "pricing_url": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/hlrk4akp7" },
     { "id": "tencent", "name": "腾讯混元", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://cloud.tencent.com/product/hunyuan", "pricing_url": "https://cloud.tencent.com/document/product/1729/97731" },
-    { "id": "stepfun", "name": "阶跃星辰", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://www.stepfun.com", "pricing_url": "https://platform.stepfun.com" }
+    { "id": "stepfun", "name": "阶跃星辰", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://www.stepfun.com", "pricing_url": "https://platform.stepfun.com" },
+    { "id": "modelscope", "name": "魔搭 ModelScope", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://modelscope.cn", "pricing_url": "https://modelscope.cn/docs" },
+    { "id": "internai", "name": "书生 Intern AI", "region": "cn", "country": "中国", "currency": "CNY", "site": "https://chat.intern-ai.org.cn", "pricing_url": "https://chat.intern-ai.org.cn" },
+    { "id": "cohere", "name": "Cohere", "region": "overseas", "country": "加拿大", "currency": "USD", "site": "https://cohere.ai", "pricing_url": "https://cohere.com/pricing" }
   ]
 }
