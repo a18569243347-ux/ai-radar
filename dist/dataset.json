@@ -15,7 +15,7 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-09-08T20:17:05+00:00",
+    "updated_at": "2026-09-09T01:13:59+00:00",
     "drift_report": [
       {
         "model_id": "deepseek-v4-pro",
@@ -32,14 +32,14 @@
       {
         "model_id": "zhipu-glm-4-6",
         "field": "input",
-        "official_usd": 0.2972,
-        "openrouter_usd": 0.55
+        "official_usd": 0.2973,
+        "openrouter_usd": 0.43
       },
       {
         "model_id": "zhipu-glm-4-6",
         "field": "output",
         "official_usd": 1.189,
-        "openrouter_usd": 2.2
+        "openrouter_usd": 1.75
       }
     ],
     "source_notes": [
@@ -50,18 +50,18 @@
   "fx": {
     "base": "USD",
     "rates": {
-      "CNY": 6.7284,
-      "EUR": 0.8604,
-      "INR": 94.5441,
-      "JPY": 154.4147,
-      "NGN": 1321.2256,
-      "TRY": 48.458,
+      "CNY": 6.7283,
+      "EUR": 0.8603,
+      "INR": 94.8432,
+      "JPY": 153.8175,
+      "NGN": 1322.013,
+      "TRY": 48.4688,
       "USD": 1.0
     },
-    "fetched_at": "2026-09-08T20:17:05+00:00",
+    "fetched_at": "2026-09-09T01:13:59+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-09-08T20:17:05+00:00",
+  "generated_at": "2026-09-09T01:13:59+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1599,8 +1599,8 @@
         {
           "model_id": "zhipu-glm-4-6",
           "name": "Z.ai: GLM 4.6",
-          "prompt_per_mtok_usd": 0.55,
-          "completion_per_mtok_usd": 2.2
+          "prompt_per_mtok_usd": 0.43,
+          "completion_per_mtok_usd": 1.75
         },
         {
           "model_id": "aliyun-qwen3-8-max",
@@ -1633,7 +1633,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-09-08T20:17:05+00:00"
+      "prices_fetched_at": "2026-09-09T01:13:59+00:00"
     },
     {
       "id": "siliconflow",
