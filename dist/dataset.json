@@ -15,7 +15,7 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-09-15T16:58:39+00:00",
+    "updated_at": "2026-09-15T20:13:50+00:00",
     "drift_report": [
       {
         "model_id": "deepseek-v4-pro",
@@ -64,10 +64,10 @@
       "TRY": 48.6368,
       "USD": 1.0
     },
-    "fetched_at": "2026-09-15T16:58:39+00:00",
+    "fetched_at": "2026-09-15T20:13:50+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-09-15T16:58:39+00:00",
+  "generated_at": "2026-09-15T20:13:50+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1490,7 +1490,7 @@
         },
         {
           "model_id": "anthropic-claude-opus-5",
-          "name": "Claude Opus 5",
+          "name": "Anthropic: Claude Opus 5",
           "prompt_per_mtok_usd": 5.0,
           "completion_per_mtok_usd": 25.0
         },
@@ -1639,7 +1639,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-09-15T16:58:39+00:00"
+      "prices_fetched_at": "2026-09-15T20:13:50+00:00"
     },
     {
       "id": "siliconflow",
