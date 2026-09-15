@@ -15,24 +15,12 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-09-14T19:19:59+00:00",
+    "updated_at": "2026-09-15T01:25:49+00:00",
     "drift_report": [
-      {
-        "model_id": "deepseek-v4-pro",
-        "field": "input",
-        "official_usd": 1.1913,
-        "openrouter_usd": 0.5795
-      },
-      {
-        "model_id": "deepseek-v4-pro",
-        "field": "output",
-        "official_usd": 3.5738,
-        "openrouter_usd": 1.7384
-      },
       {
         "model_id": "deepseek-v4-flash",
         "field": "output",
-        "official_usd": 0.1936,
+        "official_usd": 0.1933,
         "openrouter_usd": 0.12
       },
       {
@@ -50,36 +38,36 @@
       {
         "model_id": "zhipu-glm-4-6",
         "field": "input",
-        "official_usd": 0.2978,
+        "official_usd": 0.2974,
         "openrouter_usd": 0.43
       },
       {
         "model_id": "zhipu-glm-4-6",
         "field": "output",
-        "official_usd": 1.1913,
+        "official_usd": 1.1896,
         "openrouter_usd": 1.75
       }
     ],
     "source_notes": [
-      "openrouter: 31 个模型价格已同步，7 条与官方价偏差超 25%（见 meta.drift_report）",
+      "openrouter: 31 个模型价格已同步，5 条与官方价偏差超 25%（见 meta.drift_report）",
       "deepseek: 未能解析（页面结构可能变化），已保留种子数据"
     ]
   },
   "fx": {
     "base": "USD",
     "rates": {
-      "CNY": 6.7156,
-      "EUR": 0.8622,
-      "INR": 95.614,
-      "JPY": 153.6117,
-      "NGN": 1327.1014,
-      "TRY": 48.6146,
+      "CNY": 6.7252,
+      "EUR": 0.8657,
+      "INR": 95.6745,
+      "JPY": 154.389,
+      "NGN": 1326.4652,
+      "TRY": 48.6368,
       "USD": 1.0
     },
-    "fetched_at": "2026-09-14T19:19:59+00:00",
+    "fetched_at": "2026-09-15T01:25:49+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-09-14T19:19:59+00:00",
+  "generated_at": "2026-09-15T01:25:49+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1569,8 +1557,8 @@
         {
           "model_id": "deepseek-v4-pro",
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
-          "prompt_per_mtok_usd": 0.5795,
-          "completion_per_mtok_usd": 1.7384
+          "prompt_per_mtok_usd": 0.9834,
+          "completion_per_mtok_usd": 2.9502
         },
         {
           "model_id": "deepseek-v4-flash",
@@ -1651,7 +1639,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-09-14T19:19:59+00:00"
+      "prices_fetched_at": "2026-09-15T01:25:49+00:00"
     },
     {
       "id": "siliconflow",
