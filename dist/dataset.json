@@ -15,24 +15,24 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-09-18T19:11:16+00:00",
+    "updated_at": "2026-09-19T01:35:05+00:00",
     "drift_report": [
       {
         "model_id": "deepseek-v4-pro",
         "field": "input",
-        "official_usd": 1.1902,
+        "official_usd": 1.1915,
         "openrouter_usd": 0.5782
       },
       {
         "model_id": "deepseek-v4-pro",
         "field": "output",
-        "official_usd": 3.5705,
+        "official_usd": 3.5746,
         "openrouter_usd": 1.7345
       },
       {
         "model_id": "deepseek-v4-flash",
         "field": "output",
-        "official_usd": 0.1934,
+        "official_usd": 0.1936,
         "openrouter_usd": 0.12
       },
       {
@@ -50,13 +50,13 @@
       {
         "model_id": "zhipu-glm-4-6",
         "field": "input",
-        "official_usd": 0.2975,
+        "official_usd": 0.2979,
         "openrouter_usd": 0.43
       },
       {
         "model_id": "zhipu-glm-4-6",
         "field": "output",
-        "official_usd": 1.1902,
+        "official_usd": 1.1915,
         "openrouter_usd": 1.75
       }
     ],
@@ -68,18 +68,18 @@
   "fx": {
     "base": "USD",
     "rates": {
-      "CNY": 6.7218,
-      "EUR": 0.8706,
-      "INR": 95.9573,
-      "JPY": 155.8362,
-      "NGN": 1330.2665,
-      "TRY": 48.7314,
+      "CNY": 6.7141,
+      "EUR": 0.8713,
+      "INR": 95.9896,
+      "JPY": 157.0551,
+      "NGN": 1329.8296,
+      "TRY": 48.7824,
       "USD": 1.0
     },
-    "fetched_at": "2026-09-18T19:11:16+00:00",
+    "fetched_at": "2026-09-19T01:35:05+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-09-18T19:11:16+00:00",
+  "generated_at": "2026-09-19T01:35:05+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1645,7 +1645,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-09-18T19:11:16+00:00"
+      "prices_fetched_at": "2026-09-19T01:35:05+00:00"
     },
     {
       "id": "siliconflow",
