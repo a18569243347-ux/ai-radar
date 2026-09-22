@@ -15,19 +15,19 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-09-22T04:50:20+00:00",
+    "updated_at": "2026-09-22T09:55:01+00:00",
     "drift_report": [
       {
         "model_id": "deepseek-v4-pro",
         "field": "input",
         "official_usd": 1.1922,
-        "openrouter_usd": 0.66
+        "openrouter_usd": 0.5586
       },
       {
         "model_id": "deepseek-v4-pro",
         "field": "output",
         "official_usd": 3.5766,
-        "openrouter_usd": 1.98
+        "openrouter_usd": 1.6759
       },
       {
         "model_id": "deepseek-v4-flash",
@@ -94,10 +94,10 @@
       "TRY": 48.8242,
       "USD": 1.0
     },
-    "fetched_at": "2026-09-22T04:50:20+00:00",
+    "fetched_at": "2026-09-22T09:55:01+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-09-22T04:50:20+00:00",
+  "generated_at": "2026-09-22T09:55:01+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1581,8 +1581,8 @@
         {
           "model_id": "deepseek-v4-pro",
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
-          "prompt_per_mtok_usd": 0.66,
-          "completion_per_mtok_usd": 1.98
+          "prompt_per_mtok_usd": 0.5586,
+          "completion_per_mtok_usd": 1.6759
         },
         {
           "model_id": "deepseek-v4-flash",
@@ -1663,7 +1663,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-09-22T04:50:20+00:00"
+      "prices_fetched_at": "2026-09-22T09:55:01+00:00"
     },
     {
       "id": "siliconflow",
