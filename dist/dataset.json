@@ -15,30 +15,30 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-09-23T19:02:25+00:00",
+    "updated_at": "2026-09-24T00:52:31+00:00",
     "drift_report": [
       {
         "model_id": "deepseek-v4-pro",
         "field": "input",
-        "official_usd": 1.1916,
+        "official_usd": 1.19,
         "openrouter_usd": 0.462
       },
       {
         "model_id": "deepseek-v4-pro",
         "field": "output",
-        "official_usd": 3.5749,
+        "official_usd": 3.57,
         "openrouter_usd": 1.386
       },
       {
         "model_id": "deepseek-v4-flash",
         "field": "input",
-        "official_usd": 0.0745,
+        "official_usd": 0.0744,
         "openrouter_usd": 0.04
       },
       {
         "model_id": "deepseek-v4-flash",
         "field": "output",
-        "official_usd": 0.1936,
+        "official_usd": 0.1934,
         "openrouter_usd": 0.64
       },
       {
@@ -68,13 +68,13 @@
       {
         "model_id": "zhipu-glm-4-6",
         "field": "input",
-        "official_usd": 0.2979,
+        "official_usd": 0.2975,
         "openrouter_usd": 0.43
       },
       {
         "model_id": "zhipu-glm-4-6",
         "field": "output",
-        "official_usd": 1.1916,
+        "official_usd": 1.19,
         "openrouter_usd": 1.75
       }
     ],
@@ -86,18 +86,18 @@
   "fx": {
     "base": "USD",
     "rates": {
-      "CNY": 6.7135,
-      "EUR": 0.8732,
-      "INR": 95.6478,
-      "JPY": 157.4154,
-      "NGN": 1328.3713,
-      "TRY": 48.8316,
+      "CNY": 6.7227,
+      "EUR": 0.8774,
+      "INR": 95.8091,
+      "JPY": 158.1273,
+      "NGN": 1326.8711,
+      "TRY": 48.8617,
       "USD": 1.0
     },
-    "fetched_at": "2026-09-23T19:02:25+00:00",
+    "fetched_at": "2026-09-24T00:52:31+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-09-23T19:02:25+00:00",
+  "generated_at": "2026-09-24T00:52:31+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1663,7 +1663,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-09-23T19:02:25+00:00"
+      "prices_fetched_at": "2026-09-24T00:52:31+00:00"
     },
     {
       "id": "siliconflow",
