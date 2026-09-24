@@ -15,7 +15,7 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-09-24T19:58:28+00:00",
+    "updated_at": "2026-09-24T23:11:33+00:00",
     "drift_report": [
       {
         "model_id": "deepseek-v4-pro",
@@ -67,7 +67,7 @@
       }
     ],
     "source_notes": [
-      "openrouter: 30 个模型价格已同步，8 条与官方价偏差超 25%（见 meta.drift_report）",
+      "openrouter: 31 个模型价格已同步，8 条与官方价偏差超 25%（见 meta.drift_report）",
       "deepseek: 未能解析（页面结构可能变化），已保留种子数据"
     ]
   },
@@ -82,10 +82,10 @@
       "TRY": 48.8617,
       "USD": 1.0
     },
-    "fetched_at": "2026-09-24T19:58:28+00:00",
+    "fetched_at": "2026-09-24T23:11:33+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-09-24T19:58:28+00:00",
+  "generated_at": "2026-09-24T23:11:33+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1567,6 +1567,12 @@
           "completion_per_mtok_usd": 2.5
         },
         {
+          "model_id": "mistral-large-2512",
+          "name": "Mistral: Mistral Large 3 2512",
+          "prompt_per_mtok_usd": 0.5,
+          "completion_per_mtok_usd": 1.5
+        },
+        {
           "model_id": "deepseek-v4-pro",
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "prompt_per_mtok_usd": 0.462,
@@ -1651,7 +1657,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-09-24T19:58:28+00:00"
+      "prices_fetched_at": "2026-09-24T23:11:33+00:00"
     },
     {
       "id": "siliconflow",
