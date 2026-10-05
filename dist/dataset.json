@@ -15,24 +15,30 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-10-04T21:56:04+00:00",
+    "updated_at": "2026-10-05T00:53:44+00:00",
     "drift_report": [
       {
         "model_id": "deepseek-v4-pro",
         "field": "input",
-        "official_usd": 1.1905,
-        "openrouter_usd": 0.55
+        "official_usd": 1.1922,
+        "openrouter_usd": 0.85
+      },
+      {
+        "model_id": "deepseek-v4-pro",
+        "field": "output",
+        "official_usd": 3.5765,
+        "openrouter_usd": 5.0
       },
       {
         "model_id": "deepseek-v4-flash",
         "field": "input",
-        "official_usd": 0.0744,
+        "official_usd": 0.0745,
         "openrouter_usd": 0.0152
       },
       {
         "model_id": "deepseek-v4-flash",
         "field": "output",
-        "official_usd": 0.1934,
+        "official_usd": 0.1937,
         "openrouter_usd": 1.28
       },
       {
@@ -50,13 +56,13 @@
       {
         "model_id": "zhipu-glm-4-6",
         "field": "input",
-        "official_usd": 0.2976,
+        "official_usd": 0.298,
         "openrouter_usd": 0.43
       },
       {
         "model_id": "zhipu-glm-4-6",
         "field": "output",
-        "official_usd": 1.1905,
+        "official_usd": 1.1922,
         "openrouter_usd": 1.75
       },
       {
@@ -73,25 +79,25 @@
       }
     ],
     "source_notes": [
-      "openrouter: 31 个模型价格已同步，9 条与官方价偏差超 25%（见 meta.drift_report）",
+      "openrouter: 31 个模型价格已同步，10 条与官方价偏差超 25%（见 meta.drift_report）",
       "deepseek: 未能解析（页面结构可能变化），已保留种子数据"
     ]
   },
   "fx": {
     "base": "USD",
     "rates": {
-      "CNY": 6.7201,
-      "EUR": 0.8888,
-      "INR": 96.3495,
-      "JPY": 157.8204,
-      "NGN": 1330.1399,
-      "TRY": 49.1366,
+      "CNY": 6.7104,
+      "EUR": 0.8889,
+      "INR": 96.4006,
+      "JPY": 157.7303,
+      "NGN": 1331.2794,
+      "TRY": 49.1619,
       "USD": 1.0
     },
-    "fetched_at": "2026-10-04T21:56:04+00:00",
+    "fetched_at": "2026-10-05T00:53:44+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-10-04T21:56:04+00:00",
+  "generated_at": "2026-10-05T00:53:44+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1581,8 +1587,8 @@
         {
           "model_id": "deepseek-v4-pro",
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
-          "prompt_per_mtok_usd": 0.55,
-          "completion_per_mtok_usd": 4.2
+          "prompt_per_mtok_usd": 0.85,
+          "completion_per_mtok_usd": 5.0
         },
         {
           "model_id": "deepseek-v4-flash",
@@ -1663,7 +1669,7 @@
           "completion_per_mtok_usd": 0.84
         }
       ],
-      "prices_fetched_at": "2026-10-04T21:56:04+00:00"
+      "prices_fetched_at": "2026-10-05T00:53:44+00:00"
     },
     {
       "id": "siliconflow",
