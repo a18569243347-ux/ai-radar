@@ -15,30 +15,30 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-10-06T21:13:36+00:00",
+    "updated_at": "2026-10-07T01:00:46+00:00",
     "drift_report": [
       {
         "model_id": "deepseek-v4-pro",
         "field": "input",
-        "official_usd": 1.1915,
+        "official_usd": 1.1919,
         "openrouter_usd": 0.66
       },
       {
         "model_id": "deepseek-v4-pro",
         "field": "output",
-        "official_usd": 3.5744,
+        "official_usd": 3.5757,
         "openrouter_usd": 1.98
       },
       {
         "model_id": "deepseek-v4-flash",
         "field": "input",
         "official_usd": 0.0745,
-        "openrouter_usd": 0.0123
+        "openrouter_usd": 0.018
       },
       {
         "model_id": "deepseek-v4-flash",
         "field": "output",
-        "official_usd": 0.1936,
+        "official_usd": 0.1937,
         "openrouter_usd": 1.28
       },
       {
@@ -68,13 +68,13 @@
       {
         "model_id": "zhipu-glm-4-6",
         "field": "input",
-        "official_usd": 0.2979,
+        "official_usd": 0.298,
         "openrouter_usd": 0.43
       },
       {
         "model_id": "zhipu-glm-4-6",
         "field": "output",
-        "official_usd": 1.1915,
+        "official_usd": 1.1919,
         "openrouter_usd": 1.75
       },
       {
@@ -98,18 +98,18 @@
   "fx": {
     "base": "USD",
     "rates": {
-      "CNY": 6.7145,
-      "EUR": 0.8921,
-      "INR": 96.3804,
-      "JPY": 157.9821,
-      "NGN": 1330.998,
-      "TRY": 49.1641,
+      "CNY": 6.7119,
+      "EUR": 0.8887,
+      "INR": 96.4676,
+      "JPY": 158.1454,
+      "NGN": 1328.1192,
+      "TRY": 49.1925,
       "USD": 1.0
     },
-    "fetched_at": "2026-10-06T21:13:36+00:00",
+    "fetched_at": "2026-10-07T01:00:46+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-10-06T21:13:36+00:00",
+  "generated_at": "2026-10-07T01:00:46+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1605,7 +1605,7 @@
         {
           "model_id": "deepseek-v4-flash",
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
-          "prompt_per_mtok_usd": 0.0123,
+          "prompt_per_mtok_usd": 0.018,
           "completion_per_mtok_usd": 1.28
         },
         {
@@ -1681,7 +1681,7 @@
           "completion_per_mtok_usd": 0.84
         }
       ],
-      "prices_fetched_at": "2026-10-06T21:13:36+00:00"
+      "prices_fetched_at": "2026-10-07T01:00:46+00:00"
     },
     {
       "id": "siliconflow",
