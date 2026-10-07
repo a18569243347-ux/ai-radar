@@ -15,7 +15,7 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-10-07T14:31:00+00:00",
+    "updated_at": "2026-10-07T20:08:57+00:00",
     "drift_report": [
       {
         "model_id": "deepseek-v4-pro",
@@ -106,10 +106,10 @@
       "TRY": 49.1925,
       "USD": 1.0
     },
-    "fetched_at": "2026-10-07T14:31:00+00:00",
+    "fetched_at": "2026-10-07T20:08:57+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-10-07T14:31:00+00:00",
+  "generated_at": "2026-10-07T20:08:57+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1611,7 +1611,7 @@
         {
           "model_id": "deepseek-chat",
           "name": "DeepSeek: DeepSeek V3.2",
-          "prompt_per_mtok_usd": 0.28,
+          "prompt_per_mtok_usd": 0.259,
           "completion_per_mtok_usd": 0.42
         },
         {
@@ -1681,7 +1681,7 @@
           "completion_per_mtok_usd": 0.84
         }
       ],
-      "prices_fetched_at": "2026-10-07T14:31:00+00:00"
+      "prices_fetched_at": "2026-10-07T20:08:57+00:00"
     },
     {
       "id": "siliconflow",
