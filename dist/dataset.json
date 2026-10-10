@@ -15,7 +15,7 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-10-10T02:45:11+00:00",
+    "updated_at": "2026-10-10T09:45:37+00:00",
     "drift_report": [
       {
         "model_id": "deepseek-v4-pro",
@@ -33,13 +33,19 @@
         "model_id": "deepseek-v4-flash",
         "field": "input",
         "official_usd": 0.0746,
-        "openrouter_usd": 0.0137
+        "openrouter_usd": 0.0082
       },
       {
         "model_id": "deepseek-v4-flash",
         "field": "output",
         "official_usd": 0.1938,
         "openrouter_usd": 1.28
+      },
+      {
+        "model_id": "deepseek-chat",
+        "field": "output",
+        "official_usd": 0.4473,
+        "openrouter_usd": 0.8
       },
       {
         "model_id": "zhipu-glm-5-3",
@@ -85,7 +91,7 @@
       }
     ],
     "source_notes": [
-      "openrouter: 31 个模型价格已同步，11 条与官方价偏差超 25%（见 meta.drift_report）",
+      "openrouter: 31 个模型价格已同步，12 条与官方价偏差超 25%（见 meta.drift_report）",
       "deepseek: 未能解析（页面结构可能变化），已保留种子数据"
     ]
   },
@@ -100,10 +106,10 @@
       "TRY": 49.3393,
       "USD": 1.0
     },
-    "fetched_at": "2026-10-10T02:45:11+00:00",
+    "fetched_at": "2026-10-10T09:45:37+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-10-10T02:45:11+00:00",
+  "generated_at": "2026-10-10T09:45:37+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1599,20 +1605,20 @@
         {
           "model_id": "deepseek-v4-flash",
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
-          "prompt_per_mtok_usd": 0.0137,
+          "prompt_per_mtok_usd": 0.0082,
           "completion_per_mtok_usd": 1.28
         },
         {
           "model_id": "deepseek-chat",
           "name": "DeepSeek: DeepSeek V3.2",
           "prompt_per_mtok_usd": 0.259,
-          "completion_per_mtok_usd": 0.42
+          "completion_per_mtok_usd": 0.8
         },
         {
           "model_id": "moonshot-kimi-k2-5",
           "name": "MoonshotAI: Kimi K2.5",
-          "prompt_per_mtok_usd": 0.45,
-          "completion_per_mtok_usd": 2.25
+          "prompt_per_mtok_usd": 0.5,
+          "completion_per_mtok_usd": 2.5
         },
         {
           "model_id": "moonshot-kimi-k2-0905",
@@ -1675,7 +1681,7 @@
           "completion_per_mtok_usd": 0.84
         }
       ],
-      "prices_fetched_at": "2026-10-10T02:45:11+00:00"
+      "prices_fetched_at": "2026-10-10T09:45:37+00:00"
     },
     {
       "id": "siliconflow",
