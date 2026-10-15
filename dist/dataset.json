@@ -15,7 +15,7 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-10-15T12:51:31+00:00",
+    "updated_at": "2026-10-15T17:45:35+00:00",
     "drift_report": [
       {
         "model_id": "openai-gpt-5-6-sol",
@@ -63,7 +63,7 @@
         "model_id": "zhipu-glm-5-3",
         "field": "input",
         "official_usd": 1.4,
-        "openrouter_usd": 0.079
+        "openrouter_usd": 0.12
       },
       {
         "model_id": "zhipu-glm-5-3-flash",
@@ -118,10 +118,10 @@
       "TRY": 49.4502,
       "USD": 1.0
     },
-    "fetched_at": "2026-10-15T12:51:31+00:00",
+    "fetched_at": "2026-10-15T17:45:35+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-10-15T12:51:31+00:00",
+  "generated_at": "2026-10-15T17:45:35+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1641,7 +1641,7 @@
         {
           "model_id": "zhipu-glm-5-3",
           "name": "Z.ai: GLM 5.3",
-          "prompt_per_mtok_usd": 0.079,
+          "prompt_per_mtok_usd": 0.12,
           "completion_per_mtok_usd": 4.8
         },
         {
@@ -1693,7 +1693,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-10-15T12:51:31+00:00"
+      "prices_fetched_at": "2026-10-15T17:45:35+00:00"
     },
     {
       "id": "siliconflow",
