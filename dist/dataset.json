@@ -15,7 +15,7 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-10-15T21:19:44+00:00",
+    "updated_at": "2026-10-15T23:51:11+00:00",
     "drift_report": [
       {
         "model_id": "openai-gpt-5-6-sol",
@@ -45,7 +45,7 @@
         "model_id": "deepseek-v4-flash",
         "field": "input",
         "official_usd": 0.0746,
-        "openrouter_usd": 0.0085
+        "openrouter_usd": 0.0068
       },
       {
         "model_id": "deepseek-v4-flash",
@@ -63,25 +63,25 @@
         "model_id": "zhipu-glm-5-3",
         "field": "input",
         "official_usd": 1.4,
-        "openrouter_usd": 0.4
+        "openrouter_usd": 0.7
       },
       {
         "model_id": "zhipu-glm-5-3",
         "field": "output",
         "official_usd": 4.4,
-        "openrouter_usd": 8.0
+        "openrouter_usd": 10.0
       },
       {
         "model_id": "zhipu-glm-5-3-flash",
         "field": "input",
         "official_usd": 0.075,
-        "openrouter_usd": 0.15
+        "openrouter_usd": 0.0198
       },
       {
         "model_id": "zhipu-glm-5-3-flash",
         "field": "output",
         "official_usd": 0.25,
-        "openrouter_usd": 0.5
+        "openrouter_usd": 0.7424
       },
       {
         "model_id": "zhipu-glm-5",
@@ -124,10 +124,10 @@
       "TRY": 49.4502,
       "USD": 1.0
     },
-    "fetched_at": "2026-10-15T21:19:44+00:00",
+    "fetched_at": "2026-10-15T23:51:11+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-10-15T21:19:44+00:00",
+  "generated_at": "2026-10-15T23:51:11+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1623,7 +1623,7 @@
         {
           "model_id": "deepseek-v4-flash",
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
-          "prompt_per_mtok_usd": 0.0085,
+          "prompt_per_mtok_usd": 0.0068,
           "completion_per_mtok_usd": 0.64
         },
         {
@@ -1647,14 +1647,14 @@
         {
           "model_id": "zhipu-glm-5-3",
           "name": "Z.ai: GLM 5.3",
-          "prompt_per_mtok_usd": 0.4,
-          "completion_per_mtok_usd": 8.0
+          "prompt_per_mtok_usd": 0.7,
+          "completion_per_mtok_usd": 10.0
         },
         {
           "model_id": "zhipu-glm-5-3-flash",
           "name": "Z.ai: GLM 5.3 Flash",
-          "prompt_per_mtok_usd": 0.15,
-          "completion_per_mtok_usd": 0.5
+          "prompt_per_mtok_usd": 0.0198,
+          "completion_per_mtok_usd": 0.7424
         },
         {
           "model_id": "zhipu-glm-5",
@@ -1699,7 +1699,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-10-15T21:19:44+00:00"
+      "prices_fetched_at": "2026-10-15T23:51:11+00:00"
     },
     {
       "id": "siliconflow",
