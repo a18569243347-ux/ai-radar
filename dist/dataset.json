@@ -15,7 +15,7 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-10-16T18:20:46+00:00",
+    "updated_at": "2026-10-16T21:42:29+00:00",
     "drift_report": [
       {
         "model_id": "openai-gpt-5-6-sol",
@@ -45,7 +45,7 @@
         "model_id": "deepseek-v4-flash",
         "field": "input",
         "official_usd": 0.0746,
-        "openrouter_usd": 0.0111
+        "openrouter_usd": 0.0068
       },
       {
         "model_id": "deepseek-v4-flash",
@@ -69,13 +69,13 @@
         "model_id": "zhipu-glm-5-3-flash",
         "field": "input",
         "official_usd": 0.075,
-        "openrouter_usd": 0.0136
+        "openrouter_usd": 0.032
       },
       {
         "model_id": "zhipu-glm-5-3-flash",
         "field": "output",
         "official_usd": 0.25,
-        "openrouter_usd": 0.7189
+        "openrouter_usd": 0.6435
       },
       {
         "model_id": "zhipu-glm-5",
@@ -118,10 +118,10 @@
       "TRY": 49.4803,
       "USD": 1.0
     },
-    "fetched_at": "2026-10-16T18:20:46+00:00",
+    "fetched_at": "2026-10-16T21:42:29+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-10-16T18:20:46+00:00",
+  "generated_at": "2026-10-16T21:42:29+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1617,7 +1617,7 @@
         {
           "model_id": "deepseek-v4-flash",
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
-          "prompt_per_mtok_usd": 0.0111,
+          "prompt_per_mtok_usd": 0.0068,
           "completion_per_mtok_usd": 1.28
         },
         {
@@ -1647,8 +1647,8 @@
         {
           "model_id": "zhipu-glm-5-3-flash",
           "name": "Z.ai: GLM 5.3 Flash",
-          "prompt_per_mtok_usd": 0.0136,
-          "completion_per_mtok_usd": 0.7189
+          "prompt_per_mtok_usd": 0.032,
+          "completion_per_mtok_usd": 0.6435
         },
         {
           "model_id": "zhipu-glm-5",
@@ -1693,7 +1693,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-10-16T18:20:46+00:00"
+      "prices_fetched_at": "2026-10-16T21:42:29+00:00"
     },
     {
       "id": "siliconflow",
