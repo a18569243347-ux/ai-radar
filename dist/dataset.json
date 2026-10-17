@@ -15,7 +15,7 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-10-16T23:55:05+00:00",
+    "updated_at": "2026-10-17T04:20:24+00:00",
     "drift_report": [
       {
         "model_id": "openai-gpt-5-6-sol",
@@ -32,32 +32,20 @@
       {
         "model_id": "deepseek-v4-pro",
         "field": "input",
-        "official_usd": 1.1935,
+        "official_usd": 1.1943,
         "openrouter_usd": 0.66
       },
       {
         "model_id": "deepseek-v4-pro",
         "field": "output",
-        "official_usd": 3.5805,
+        "official_usd": 3.5829,
         "openrouter_usd": 1.98
       },
       {
         "model_id": "deepseek-v4-flash",
-        "field": "input",
-        "official_usd": 0.0746,
-        "openrouter_usd": 0.0073
-      },
-      {
-        "model_id": "deepseek-v4-flash",
         "field": "output",
-        "official_usd": 0.1939,
-        "openrouter_usd": 1.28
-      },
-      {
-        "model_id": "deepseek-chat",
-        "field": "output",
-        "official_usd": 0.4476,
-        "openrouter_usd": 0.8
+        "official_usd": 0.1941,
+        "openrouter_usd": 0.14
       },
       {
         "model_id": "zhipu-glm-5-3",
@@ -69,13 +57,13 @@
         "model_id": "zhipu-glm-5-3-flash",
         "field": "input",
         "official_usd": 0.075,
-        "openrouter_usd": 0.0109
+        "openrouter_usd": 0.15
       },
       {
         "model_id": "zhipu-glm-5-3-flash",
         "field": "output",
         "official_usd": 0.25,
-        "openrouter_usd": 0.4455
+        "openrouter_usd": 0.5
       },
       {
         "model_id": "zhipu-glm-5",
@@ -92,36 +80,36 @@
       {
         "model_id": "zhipu-glm-4-6",
         "field": "input",
-        "official_usd": 0.2984,
+        "official_usd": 0.2986,
         "openrouter_usd": 0.5
       },
       {
         "model_id": "zhipu-glm-4-6",
         "field": "output",
-        "official_usd": 1.1935,
+        "official_usd": 1.1943,
         "openrouter_usd": 2.0
       }
     ],
     "source_notes": [
-      "openrouter: 31 个模型价格已同步，14 条与官方价偏差超 25%（见 meta.drift_report）",
+      "openrouter: 31 个模型价格已同步，12 条与官方价偏差超 25%（见 meta.drift_report）",
       "deepseek: 未能解析（页面结构可能变化），已保留种子数据"
     ]
   },
   "fx": {
     "base": "USD",
     "rates": {
-      "CNY": 6.703,
-      "EUR": 0.8917,
-      "INR": 95.1001,
-      "JPY": 158.087,
-      "NGN": 1331.1896,
-      "TRY": 49.4803,
+      "CNY": 6.6985,
+      "EUR": 0.8895,
+      "INR": 95.112,
+      "JPY": 157.9943,
+      "NGN": 1332.432,
+      "TRY": 49.5215,
       "USD": 1.0
     },
-    "fetched_at": "2026-10-16T23:55:05+00:00",
+    "fetched_at": "2026-10-17T04:20:24+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-10-16T23:55:05+00:00",
+  "generated_at": "2026-10-17T04:20:24+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1617,14 +1605,14 @@
         {
           "model_id": "deepseek-v4-flash",
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
-          "prompt_per_mtok_usd": 0.0073,
-          "completion_per_mtok_usd": 1.28
+          "prompt_per_mtok_usd": 0.07,
+          "completion_per_mtok_usd": 0.14
         },
         {
           "model_id": "deepseek-chat",
           "name": "DeepSeek: DeepSeek V3.2",
-          "prompt_per_mtok_usd": 0.259,
-          "completion_per_mtok_usd": 0.8
+          "prompt_per_mtok_usd": 0.28,
+          "completion_per_mtok_usd": 0.42
         },
         {
           "model_id": "moonshot-kimi-k2-5",
@@ -1647,8 +1635,8 @@
         {
           "model_id": "zhipu-glm-5-3-flash",
           "name": "Z.ai: GLM 5.3 Flash",
-          "prompt_per_mtok_usd": 0.0109,
-          "completion_per_mtok_usd": 0.4455
+          "prompt_per_mtok_usd": 0.15,
+          "completion_per_mtok_usd": 0.5
         },
         {
           "model_id": "zhipu-glm-5",
@@ -1693,7 +1681,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-10-16T23:55:05+00:00"
+      "prices_fetched_at": "2026-10-17T04:20:24+00:00"
     },
     {
       "id": "siliconflow",
