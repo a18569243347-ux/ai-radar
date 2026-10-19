@@ -15,7 +15,7 @@
         "note": "首版数据集：15 家厂商、订阅计划、免费资源与合规聚合平台。"
       }
     ],
-    "updated_at": "2026-10-19T11:15:06+00:00",
+    "updated_at": "2026-10-19T22:18:42+00:00",
     "drift_report": [
       {
         "model_id": "openai-gpt-5-6-sol",
@@ -45,7 +45,13 @@
         "model_id": "deepseek-v4-flash",
         "field": "input",
         "official_usd": 0.0747,
-        "openrouter_usd": 0.15
+        "openrouter_usd": 0.1298
+      },
+      {
+        "model_id": "deepseek-v4-flash",
+        "field": "output",
+        "official_usd": 0.1942,
+        "openrouter_usd": 0.3894
       },
       {
         "model_id": "zhipu-glm-5-3",
@@ -97,7 +103,7 @@
       }
     ],
     "source_notes": [
-      "openrouter: 31 个模型价格已同步，13 条与官方价偏差超 25%（见 meta.drift_report）",
+      "openrouter: 31 个模型价格已同步，14 条与官方价偏差超 25%（见 meta.drift_report）",
       "deepseek: 未能解析（页面结构可能变化），已保留种子数据"
     ]
   },
@@ -112,10 +118,10 @@
       "TRY": 49.544,
       "USD": 1.0
     },
-    "fetched_at": "2026-10-19T11:15:06+00:00",
+    "fetched_at": "2026-10-19T22:18:42+00:00",
     "source": "open.er-api.com"
   },
-  "generated_at": "2026-10-19T11:15:06+00:00",
+  "generated_at": "2026-10-19T22:18:42+00:00",
   "providers": [
     {
       "id": "openai",
@@ -1611,8 +1617,8 @@
         {
           "model_id": "deepseek-v4-flash",
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
-          "prompt_per_mtok_usd": 0.15,
-          "completion_per_mtok_usd": 0.15
+          "prompt_per_mtok_usd": 0.1298,
+          "completion_per_mtok_usd": 0.3894
         },
         {
           "model_id": "deepseek-chat",
@@ -1687,7 +1693,7 @@
           "completion_per_mtok_usd": 1.2
         }
       ],
-      "prices_fetched_at": "2026-10-19T11:15:06+00:00"
+      "prices_fetched_at": "2026-10-19T22:18:42+00:00"
     },
     {
       "id": "siliconflow",
